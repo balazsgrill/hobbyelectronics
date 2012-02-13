@@ -318,21 +318,16 @@
                   <steps xsi:type="lst:SequenceStep">
                     <steps xsi:type="lst:SequenceStep">
                       <steps xsi:type="lst:SequenceStep">
-                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
-                          <steps xsi:type="lst:SequenceStep">
-                            <steps xsi:type="lst:InstructionStep" code="3648" width="16"/>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aSETF">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
                               <steps xsi:type="lst:SequenceStep">
                                 <steps xsi:type="lst:SequenceStep"/>
                               </steps>
                             </steps>
-                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.SETF">
                               <steps xsi:type="lst:SequenceStep">
-                                <steps xsi:type="lst:InstructionStep" code="28363" width="16"/>
+                                <steps xsi:type="lst:InstructionStep" code="26827" width="16"/>
                               </steps>
                             </steps>
                           </steps>
@@ -378,7 +373,7 @@
                       <steps xsi:type="lst:SequenceStep">
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
                           <steps xsi:type="lst:SequenceStep">
-                            <steps xsi:type="lst:InstructionStep" code="3621" width="16"/>
+                            <steps xsi:type="lst:InstructionStep" code="3620" width="16"/>
                           </steps>
                         </steps>
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">

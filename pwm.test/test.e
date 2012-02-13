@@ -45,9 +45,13 @@ initPWM(){
 	CCPR1L = 20;
 	CCPR1H = 0;
 	PWM1CON = 0;
-	PR2 = 0x40;
+	PR2 = 0xFF;
 	PSTRCON = 1;
-	T2CON = 0x25;
+	/*
+	 * PWM frequency is controlled by T2CON
+	 * Postscaler and prescaler
+	 */
+	T2CON = 0x24;
 }
 
 main(){
