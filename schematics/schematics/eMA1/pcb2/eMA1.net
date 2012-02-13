@@ -1,0 +1,130 @@
+# EESchema Netlist Version 1.1 created  2012. 02. 02. 12:17:16
+(
+ ( /4F0C870A D5 D1 DIODE
+  ( 1 N-000018 )
+  ( 2 VCC )
+ )
+ ( /4F0C8718 D5 D2 DIODE
+  ( 1 N-000019 )
+  ( 2 VCC )
+ )
+ ( /4F0C871B D5 D3 DIODE
+  ( 1 N-000020 )
+  ( 2 VCC )
+ )
+ ( /4F0C871F D5 D4 DIODE
+  ( 1 N-000021 )
+  ( 2 VCC )
+ )
+ ( /4F0C8725 D5 D5 DIODE
+  ( 1 GND )
+  ( 2 N-000018 )
+ )
+ ( /4F0C8728 D5 D6 DIODE
+  ( 1 GND )
+  ( 2 N-000019 )
+ )
+ ( /4F0C872C D5 D7 DIODE
+  ( 1 GND )
+  ( 2 N-000020 )
+ )
+ ( /4F0C872F D5 D8 DIODE
+  ( 1 GND )
+  ( 2 N-000021 )
+ )
+ ( /4F27CD9A SO14N IC1 PIC16F1824
+  ( 1 N-000010 )
+  ( 2 N-000011 )
+  ( 3 ? )
+  ( 4 N-000008 )
+  ( 5 N-000013 )
+  ( 6 N-000009 )
+  ( 7 N-000003 )
+  ( 8 N-000012 )
+  ( 9 N-000001 )
+  ( 10 N-000004 )
+  ( 11 N-000005 )
+  ( 12 N-000014 )
+  ( 13 N-000006 )
+  ( 14 N-000007 )
+ )
+ ( /4F0C85F5 MULTIWATT-15 IC2 L298
+  ( 1 GND )
+  ( 2 N-000018 )
+  ( 3 N-000019 )
+  ( 4 VCC )
+  ( 5 N-000003 )
+  ( 6 N-000013 )
+  ( 7 N-000009 )
+  ( 8 GND )
+  ( 9 N-000010 )
+  ( 10 N-000005 )
+  ( 11 N-000011 )
+  ( 12 N-000012 )
+  ( 13 N-000020 )
+  ( 14 N-000021 )
+  ( 15 GND )
+ )
+ ( /4F0C86CE SIL-4 P1 CONN_4
+  ( 1 N-000018 )
+  ( 2 N-000019 )
+  ( 3 N-000020 )
+  ( 4 N-000021 )
+ )
+ ( /4F27CE3D SIL-4 P2 CONN_4
+  ( 1 N-000010 )
+  ( 2 N-000007 )
+  ( 3 N-000004 )
+  ( 4 N-000001 )
+ )
+ ( /4F21663C SIL-6 P3 CONN_6
+  ( 1 N-000008 )
+  ( 2 N-000010 )
+  ( 3 N-000007 )
+  ( 4 N-000006 )
+  ( 5 N-000014 )
+  ( 6 ? )
+ )
+ ( /4F27D2DC SIL-4 P4 CONN_4
+  ( 1 VCC )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 N-000010 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component D1
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component D3
+ D?
+ S*
+$endlist
+$component D4
+ D?
+ S*
+$endlist
+$component D5
+ D?
+ S*
+$endlist
+$component D6
+ D?
+ S*
+$endlist
+$component D7
+ D?
+ S*
+$endlist
+$component D8
+ D?
+ S*
+$endlist
+$endfootprintlist
+}
