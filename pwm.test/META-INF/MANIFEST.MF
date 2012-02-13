@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: e.test
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: e.pic18;bundle-version="0.2.0",
+ e.pic18f14k50;bundle-version="0.2.0",
+ e.core;bundle-version="0.1.0"
