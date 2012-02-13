@@ -209,21 +209,219 @@
               </steps>
             </steps>
           </steps>
+          <steps xsi:type="lst:SequenceStep" name="test.initPWM">
+            <steps xsi:type="lst:SequenceStep">
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:InstructionStep" code="3596" width="16"/>
+                          </steps>
+                        </steps>
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:SequenceStep"/>
+                              </steps>
+                            </steps>
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:InstructionStep" code="28349" width="16"/>
+                              </steps>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:InstructionStep" code="3604" width="16"/>
+                          </steps>
+                        </steps>
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:SequenceStep"/>
+                              </steps>
+                            </steps>
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:InstructionStep" code="28350" width="16"/>
+                              </steps>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aCLRF">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                            <steps xsi:type="lst:SequenceStep">
+                              <steps xsi:type="lst:SequenceStep"/>
+                            </steps>
+                          </steps>
+                          <steps xsi:type="lst:SequenceStep" name="microchip.pic18.CLRF">
+                            <steps xsi:type="lst:SequenceStep">
+                              <steps xsi:type="lst:InstructionStep" code="27327" width="16"/>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aCLRF">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                            <steps xsi:type="lst:SequenceStep">
+                              <steps xsi:type="lst:SequenceStep"/>
+                            </steps>
+                          </steps>
+                          <steps xsi:type="lst:SequenceStep" name="microchip.pic18.CLRF">
+                            <steps xsi:type="lst:SequenceStep">
+                              <steps xsi:type="lst:InstructionStep" code="27319" width="16"/>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:InstructionStep" code="3648" width="16"/>
+                          </steps>
+                        </steps>
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:SequenceStep"/>
+                              </steps>
+                            </steps>
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:InstructionStep" code="28363" width="16"/>
+                              </steps>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:InstructionStep" code="3585" width="16"/>
+                          </steps>
+                        </steps>
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:SequenceStep"/>
+                              </steps>
+                            </steps>
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:InstructionStep" code="28345" width="16"/>
+                              </steps>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:InstructionStep" code="3621" width="16"/>
+                          </steps>
+                        </steps>
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:SequenceStep"/>
+                              </steps>
+                            </steps>
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:InstructionStep" code="28362" width="16"/>
+                              </steps>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+            </steps>
+          </steps>
           <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
             <steps xsi:type="lst:SequenceStep">
               <steps xsi:type="lst:SequenceStep">
                 <steps xsi:type="lst:SequenceStep">
                   <steps xsi:type="lst:SequenceStep">
-                    <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aSETF">
+                    <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:InstructionStep" code="3669" width="16"/>
+                      </steps>
+                    </steps>
+                    <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
                       <steps xsi:type="lst:SequenceStep">
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:SequenceStep"/>
                           </steps>
                         </steps>
-                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.SETF">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
                           <steps xsi:type="lst:SequenceStep">
-                            <steps xsi:type="lst:InstructionStep" code="26624" width="16"/>
+                            <steps xsi:type="lst:InstructionStep" code="28160" width="16"/>
                           </steps>
                         </steps>
                       </steps>
@@ -303,10 +501,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -327,10 +525,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.2/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -486,10 +684,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -510,10 +708,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.8/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -669,10 +867,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -693,10 +891,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.14/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -852,10 +1050,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -876,10 +1074,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.20/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1035,10 +1233,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1059,10 +1257,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.26/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1218,10 +1416,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1242,10 +1440,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.32/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1401,10 +1599,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1425,10 +1623,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.38/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1584,10 +1782,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1608,10 +1806,10 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                             <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
+                              <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.12/@steps.0/@steps.44/@steps.0/@steps.0/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -1711,26 +1909,156 @@
               </steps>
               <steps xsi:type="lst:SequenceStep" name="microchip.pic18.INCF">
                 <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:InstructionStep" code="10942" width="16"/>
+                </steps>
+              </steps>
+            </steps>
+          </steps>
+          <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aINCF">
+            <steps xsi:type="lst:SequenceStep">
+              <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:SequenceStep"/>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="microchip.pic18.INCF">
+                <steps xsi:type="lst:SequenceStep">
                   <steps xsi:type="lst:InstructionStep" code="10752" width="16"/>
                 </steps>
               </steps>
             </steps>
           </steps>
-          <steps xsi:type="lst:SequenceStep" name="microchip.PIC18F14K50.SPI.wait">
+          <steps xsi:type="lst:SequenceStep" name="test.wait3">
             <steps xsi:type="lst:SequenceStep">
-              <steps xsi:type="lst:SequenceStep" name="microchip.pic18.NOP">
+              <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
                 <steps xsi:type="lst:SequenceStep">
-                  <steps xsi:type="lst:InstructionStep" width="16"/>
+                  <steps xsi:type="lst:SequenceStep">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:InstructionStep" code="3684" width="16"/>
+                          </steps>
+                        </steps>
+                        <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:SequenceStep"/>
+                              </steps>
+                            </steps>
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:InstructionStep" code="28161" width="16"/>
+                              </steps>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
                 </steps>
               </steps>
-              <steps xsi:type="lst:SequenceStep" name="microchip.pic18.NOP">
+              <steps xsi:type="lst:LabelStep"/>
+              <steps xsi:type="lst:SequenceStep" name="test.wait2">
                 <steps xsi:type="lst:SequenceStep">
-                  <steps xsi:type="lst:InstructionStep" width="16"/>
+                  <steps xsi:type="lst:SequenceStep" name="pic18.platform.u8.set_u8">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:SequenceStep">
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVLW">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:InstructionStep" code="3684" width="16"/>
+                              </steps>
+                            </steps>
+                            <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aMOVWF">
+                              <steps xsi:type="lst:SequenceStep">
+                                <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                                  <steps xsi:type="lst:SequenceStep">
+                                    <steps xsi:type="lst:SequenceStep"/>
+                                  </steps>
+                                </steps>
+                                <steps xsi:type="lst:SequenceStep" name="microchip.pic18.MOVWF">
+                                  <steps xsi:type="lst:SequenceStep">
+                                    <steps xsi:type="lst:InstructionStep" code="28162" width="16"/>
+                                  </steps>
+                                </steps>
+                              </steps>
+                            </steps>
+                          </steps>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                  <steps xsi:type="lst:LabelStep"/>
+                  <steps xsi:type="lst:SequenceStep" name="microchip.PIC18F14K50.SPI.wait">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep" name="microchip.pic18.NOP">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:InstructionStep" width="16"/>
+                        </steps>
+                      </steps>
+                      <steps xsi:type="lst:SequenceStep" name="microchip.pic18.NOP">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:InstructionStep" width="16"/>
+                        </steps>
+                      </steps>
+                      <steps xsi:type="lst:SequenceStep" name="microchip.pic18.NOP">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:InstructionStep" width="16"/>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                  <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aINCFSZ">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:SequenceStep"/>
+                        </steps>
+                      </steps>
+                      <steps xsi:type="lst:SequenceStep" name="microchip.pic18.INCFSZ">
+                        <steps xsi:type="lst:SequenceStep">
+                          <steps xsi:type="lst:InstructionStep" code="15874" width="16"/>
+                        </steps>
+                      </steps>
+                    </steps>
+                  </steps>
+                  <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:InstructionStep" code="61184" width="16">
+                        <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.15/@steps.0/@steps.2/@steps.0/@steps.1"/>
+                      </steps>
+                      <steps xsi:type="lst:InstructionStep" code="61440" width="16">
+                        <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.15/@steps.0/@steps.2/@steps.0/@steps.1"/>
+                      </steps>
+                    </steps>
+                  </steps>
                 </steps>
               </steps>
-              <steps xsi:type="lst:SequenceStep" name="microchip.pic18.NOP">
+              <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.aINCFSZ">
                 <steps xsi:type="lst:SequenceStep">
-                  <steps xsi:type="lst:InstructionStep" width="16"/>
+                  <steps xsi:type="lst:SequenceStep" name="microchip.pic18.assisted.assistSelectBank">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:SequenceStep"/>
+                    </steps>
+                  </steps>
+                  <steps xsi:type="lst:SequenceStep" name="microchip.pic18.INCFSZ">
+                    <steps xsi:type="lst:SequenceStep">
+                      <steps xsi:type="lst:InstructionStep" code="15873" width="16"/>
+                    </steps>
+                  </steps>
+                </steps>
+              </steps>
+              <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
+                <steps xsi:type="lst:SequenceStep">
+                  <steps xsi:type="lst:InstructionStep" code="61184" width="16">
+                    <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.15/@steps.0/@steps.1"/>
+                  </steps>
+                  <steps xsi:type="lst:InstructionStep" code="61440" width="16">
+                    <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.15/@steps.0/@steps.1"/>
+                  </steps>
                 </steps>
               </steps>
             </steps>
@@ -1738,10 +2066,10 @@
           <steps xsi:type="lst:SequenceStep" name="microchip.pic18.GOTO">
             <steps xsi:type="lst:SequenceStep">
               <steps xsi:type="lst:InstructionStep" code="61184" width="16">
-                <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.10"/>
+                <refs size="8" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11"/>
               </steps>
               <steps xsi:type="lst:InstructionStep" code="61440" width="16">
-                <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.10"/>
+                <refs shift="8" size="12" label="//@step/@steps.0/@steps.0/@steps.0/@steps.11"/>
               </steps>
             </steps>
           </steps>
