@@ -1,4 +1,4 @@
-update=2012. 02. 02. 12:18:48
+update=2012. 02. 17. 15:36:34
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -98,13 +98,14 @@ MSegLar=150
 LastNetListRead=eMA1/pcb2/eMA1.net
 [pcbnew/libraries]
 LibDir=
-LibName1=sockets
-LibName2=connect
-LibName3=discret
-LibName4=pin_array
-LibName5=divers
-LibName6=libcms
-LibName7=display
-LibName8=valves
-LibName9=led
-LibName10=dip_sockets
+LibName1=libs/multiwatt15
+LibName2=sockets
+LibName3=connect
+LibName4=discret
+LibName5=pin_array
+LibName6=divers
+LibName7=libcms
+LibName8=display
+LibName9=valves
+LibName10=led
+LibName11=dip_sockets

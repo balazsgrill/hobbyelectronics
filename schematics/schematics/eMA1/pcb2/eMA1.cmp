@@ -1,59 +1,80 @@
-Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 02. 02. 12:17:16
+Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 02. 17. 15:38:02
+
+BeginCmp
+TimeStamp = /4F3E6398;
+Reference = C1;
+ValeurCmp = CP1;
+IdModule  = C1V5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3E63B9;
+Reference = C2;
+ValeurCmp = CP1;
+IdModule  = C1V5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3E63C2;
+Reference = C3;
+ValeurCmp = CP1;
+IdModule  = C1V5;
+EndCmp
 
 BeginCmp
 TimeStamp = /4F0C870A;
 Reference = D1;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F0C8718;
 Reference = D2;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F0C871B;
 Reference = D3;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F0C871F;
 Reference = D4;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F0C8725;
 Reference = D5;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F0C8728;
 Reference = D6;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F0C872C;
 Reference = D7;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F0C872F;
 Reference = D8;
 ValeurCmp = DIODE;
-IdModule  = D5;
+IdModule  = D3;
 EndCmp
 
 BeginCmp
@@ -71,17 +92,24 @@ IdModule  = MULTIWATT-15;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F0C86CE;
-Reference = P1;
-ValeurCmp = CONN_4;
-IdModule  = SIL-4;
+TimeStamp = /4F3E5882;
+Reference = J1;
+ValeurCmp = CONN_4X2;
+IdModule  = pin_array_4x2;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F27CE3D;
-Reference = P2;
+TimeStamp = /4F0C86CE;
+Reference = P1;
 ValeurCmp = CONN_4;
-IdModule  = SIL-4;
+IdModule  = bornier4;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3E5590;
+Reference = P2;
+ValeurCmp = CONN_5X2;
+IdModule  = PIN_ARRAY_5x2;
 EndCmp
 
 BeginCmp
