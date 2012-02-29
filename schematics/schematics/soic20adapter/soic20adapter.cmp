@@ -1,0 +1,24 @@
+Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 02. 29. 14:18:56
+
+BeginCmp
+TimeStamp = /4F4E1B78;
+Reference = P1;
+ValeurCmp = DIL24;
+IdModule  = SOIC24;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2375;
+Reference = U1;
+ValeurCmp = SIL12;
+IdModule  = SIL-12;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2369;
+Reference = U2;
+ValeurCmp = SIL12;
+IdModule  = SIL-12;
+EndCmp
+
+EndListe
