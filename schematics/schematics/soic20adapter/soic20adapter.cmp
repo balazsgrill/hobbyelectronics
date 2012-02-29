@@ -1,24 +1,87 @@
-Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 02. 29. 14:18:56
+Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 02. 29. 14:52:38
 
 BeginCmp
-TimeStamp = /4F4E1B78;
+TimeStamp = /4F4E2C95;
+Reference = J1;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CA1;
+Reference = J2;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CDA;
+Reference = J3;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CD9;
+Reference = J4;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CEE;
+Reference = J5;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CED;
+Reference = J6;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CEB;
+Reference = J7;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CEC;
+Reference = J8;
+ValeurCmp = SIL10;
+IdModule  = SIL-10;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2C83;
 Reference = P1;
-ValeurCmp = DIL24;
-IdModule  = SOIC24;
+ValeurCmp = DIL20;
+IdModule  = SO20L;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4E2375;
-Reference = U1;
-ValeurCmp = SIL12;
-IdModule  = SIL-12;
+TimeStamp = /4F4E2CDB;
+Reference = P2;
+ValeurCmp = DIL20;
+IdModule  = SO20L;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4E2369;
-Reference = U2;
-ValeurCmp = SIL12;
-IdModule  = SIL-12;
+TimeStamp = /4F4E2CEF;
+Reference = P3;
+ValeurCmp = DIL20;
+IdModule  = SO20L;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4E2CEA;
+Reference = P4;
+ValeurCmp = DIL20;
+IdModule  = SO20L;
 EndCmp
 
 EndListe
