@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 02. 29. 14:52:38
+Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 03. 05. 17:52:43
 
 BeginCmp
 TimeStamp = /4F4E2C95;
@@ -29,34 +29,6 @@ IdModule  = SIL-10;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4E2CEE;
-Reference = J5;
-ValeurCmp = SIL10;
-IdModule  = SIL-10;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F4E2CED;
-Reference = J6;
-ValeurCmp = SIL10;
-IdModule  = SIL-10;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F4E2CEB;
-Reference = J7;
-ValeurCmp = SIL10;
-IdModule  = SIL-10;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F4E2CEC;
-Reference = J8;
-ValeurCmp = SIL10;
-IdModule  = SIL-10;
-EndCmp
-
-BeginCmp
 TimeStamp = /4F4E2C83;
 Reference = P1;
 ValeurCmp = DIL20;
@@ -71,17 +43,87 @@ IdModule  = SO20L;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4E2CEF;
+TimeStamp = /4F54EE26;
 Reference = P3;
-ValeurCmp = DIL20;
-IdModule  = SO20L;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4E2CEA;
+TimeStamp = /4F54EE77;
 Reference = P4;
-ValeurCmp = DIL20;
-IdModule  = SO20L;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE1B;
+Reference = P5;
+ValeurCmp = DIL14;
+IdModule  = SO14E;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE76;
+Reference = P6;
+ValeurCmp = DIL14;
+IdModule  = SO14E;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE2F;
+Reference = P7;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE78;
+Reference = P8;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE71;
+Reference = P9;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE7E;
+Reference = P10;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE72;
+Reference = P11;
+ValeurCmp = DIL14;
+IdModule  = SO14E;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE7D;
+Reference = P12;
+ValeurCmp = DIL14;
+IdModule  = SO14E;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE70;
+Reference = P13;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F54EE7F;
+Reference = P14;
+ValeurCmp = CONN_7;
+IdModule  = SIL-7;
 EndCmp
 
 EndListe
