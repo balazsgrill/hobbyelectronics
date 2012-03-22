@@ -1,0 +1,73 @@
+EESchema Schematic File Version 2  date 2012. 02. 24. 18:45:34
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 43  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "24 feb 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L DIL14 IC1
+U 1 1 4F47CCAE
+P 7450 3900
+F 0 "IC1" H 7450 4300 60  0000 C CNN
+F 1 "DIL14" V 7450 3900 50  0000 C CNN
+	1    7450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIL20 IC2
+U 1 1 4F47CC9F
+P 4200 4400
+F 0 "IC2" H 4200 4950 70  0000 C CNN
+F 1 "DIL20" V 4200 4400 70  0000 C CNN
+	1    4200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB J?
+U 1 1 4F47CBF7
+P 6200 2500
+F 0 "J?" H 6150 2900 60  0000 C CNN
+F 1 "USB" V 5950 2650 60  0000 C CNN
+	1    6200 2500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

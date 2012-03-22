@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 15 Mar 2012 14:03:59 CET
+EESchema Schematic File Version 2  date 2012. 03. 22. 18:04:01
 LIBS:resonator
 LIBS:power
 LIBS:device
@@ -33,13 +33,14 @@ LIBS:valves
 LIBS:l298
 LIBS:mcp2200
 LIBS:pic16f1824
-EELAYER 43  0
+LIBS:eMP1-cache
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "15 mar 2012"
+Date "22 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -47,6 +48,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L CP C2
+U 1 1 4F6B5ADD
+P 3550 1500
+F 0 "C2" H 3600 1600 50  0000 L CNN
+F 1 "CP" H 3600 1400 50  0000 L CNN
+	1    3550 1500
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
 	5050 4900 3950 4900
 Wire Wire Line
@@ -685,15 +695,6 @@ F 1 "RESONATOR" H 1750 1600 60  0001 C CNN
 F 4 "RESONATOR" H 1750 1250 60  0000 C CNN "Value"
 	1    1750 1600
 	1    0    0    -1  
-$EndComp
-$Comp
-L CP1 C2
-U 1 1 4F61DD2E
-P 3550 1500
-F 0 "C2" H 3600 1600 50  0000 L CNN
-F 1 "CP1" H 3600 1400 50  0000 L CNN
-	1    3550 1500
-	0    -1   1    0   
 $EndComp
 $Comp
 L C C1
