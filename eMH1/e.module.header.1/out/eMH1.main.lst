@@ -6,7 +6,7 @@
         <steps xsi:type="lst:SequenceStep" name="main.main">
           <steps xsi:type="lst:SequenceStep">
             <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@153, 242)">
-              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@8f2019">
+              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@fe318c">
                 <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
                   <steps xsi:type="lst:SequenceStep">
                     <steps xsi:type="lst:SequenceStep">
@@ -41,7 +41,7 @@
               </steps>
             </steps>
             <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@152, 31)">
-              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@12992c">
+              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@14253a3">
                 <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
                   <steps xsi:type="lst:SequenceStep">
                     <steps xsi:type="lst:SequenceStep">
@@ -75,172 +75,11 @@
                 </steps>
               </steps>
             </steps>
-            <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@411, 25)">
-              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@12f73dd">
-                <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
-                  <steps xsi:type="lst:SequenceStep">
-                    <steps xsi:type="lst:SequenceStep">
-                      <steps xsi:type="lst:SequenceStep" name="0"/>
-                      <steps xsi:type="lst:SequenceStep">
-                        <steps xsi:type="lst:SequenceStep" name="Call MOVLW">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVLW">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="12313" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call SELECTB">
-                          <steps xsi:type="lst:SequenceStep" name="pic16.bankselect.SELECTB">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
-                              <steps xsi:type="lst:InstructionStep" code="35" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call MOVWF">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVWF">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="155" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                      </steps>
-                    </steps>
-                  </steps>
-                </steps>
-              </steps>
-            </steps>
-            <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@412, 0)">
-              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1cc340b">
-                <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
-                  <steps xsi:type="lst:SequenceStep">
-                    <steps xsi:type="lst:SequenceStep">
-                      <steps xsi:type="lst:SequenceStep" name="1"/>
-                      <steps xsi:type="lst:SequenceStep">
-                        <steps xsi:type="lst:SequenceStep" name="Call SELECTB">
-                          <steps xsi:type="lst:SequenceStep" name="pic16.bankselect.SELECTB">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
-                              <steps xsi:type="lst:InstructionStep" code="35" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call CLRF">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.CLRF">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="412" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                      </steps>
-                    </steps>
-                  </steps>
-                </steps>
-              </steps>
-            </steps>
-            <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@415, 0)">
-              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@48172">
-                <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
-                  <steps xsi:type="lst:SequenceStep">
-                    <steps xsi:type="lst:SequenceStep">
-                      <steps xsi:type="lst:SequenceStep" name="1"/>
-                      <steps xsi:type="lst:SequenceStep">
-                        <steps xsi:type="lst:SequenceStep" name="Call SELECTB">
-                          <steps xsi:type="lst:SequenceStep" name="pic16.bankselect.SELECTB">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
-                              <steps xsi:type="lst:InstructionStep" code="35" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call CLRF">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.CLRF">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="415" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                      </steps>
-                    </steps>
-                  </steps>
-                </steps>
-              </steps>
-            </steps>
-            <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@414, 32)">
-              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1b30a69">
-                <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
-                  <steps xsi:type="lst:SequenceStep">
-                    <steps xsi:type="lst:SequenceStep">
-                      <steps xsi:type="lst:SequenceStep" name="0"/>
-                      <steps xsi:type="lst:SequenceStep">
-                        <steps xsi:type="lst:SequenceStep" name="Call MOVLW">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVLW">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="12320" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call SELECTB">
-                          <steps xsi:type="lst:SequenceStep" name="pic16.bankselect.SELECTB">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
-                              <steps xsi:type="lst:InstructionStep" code="35" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call MOVWF">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVWF">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="158" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                      </steps>
-                    </steps>
-                  </steps>
-                </steps>
-              </steps>
-            </steps>
-            <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@413, 128)">
-              <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@310caf">
-                <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
-                  <steps xsi:type="lst:SequenceStep">
-                    <steps xsi:type="lst:SequenceStep">
-                      <steps xsi:type="lst:SequenceStep" name="0"/>
-                      <steps xsi:type="lst:SequenceStep">
-                        <steps xsi:type="lst:SequenceStep" name="Call MOVLW">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVLW">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="12416" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call SELECTB">
-                          <steps xsi:type="lst:SequenceStep" name="pic16.bankselect.SELECTB">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
-                              <steps xsi:type="lst:InstructionStep" code="35" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                        <steps xsi:type="lst:SequenceStep" name="Call MOVWF">
-                          <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVWF">
-                            <steps xsi:type="lst:SequenceStep">
-                              <steps xsi:type="lst:InstructionStep" code="157" width="14"/>
-                            </steps>
-                          </steps>
-                        </steps>
-                      </steps>
-                    </steps>
-                  </steps>
-                </steps>
-              </steps>
-            </steps>
             <steps xsi:type="lst:SequenceStep" name="Call mainloop">
               <steps xsi:type="lst:SequenceStep" name="main.mainloop">
                 <steps xsi:type="lst:SequenceStep">
                   <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@d, 0)">
-                    <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1b92fd3">
+                    <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@abc450">
                       <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
                         <steps xsi:type="lst:SequenceStep">
                           <steps xsi:type="lst:SequenceStep">
@@ -251,7 +90,7 @@
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                     <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                      <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                      <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                     </steps>
                                   </steps>
                                 </steps>
@@ -260,7 +99,7 @@
                                 <steps xsi:type="lst:SequenceStep" name="microchip.pic16.CLRF">
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:InstructionStep" code="384" width="14">
-                                      <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                      <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                     </steps>
                                   </steps>
                                 </steps>
@@ -273,10 +112,10 @@
                   </steps>
                   <steps xsi:type="lst:LabelStep"/>
                   <steps xsi:type="lst:SequenceStep" name="Call tryToSendByte">
-                    <steps xsi:type="lst:SequenceStep" name="main.tryToSendByte">
+                    <steps xsi:type="lst:SequenceStep" name="p16f1824.uart.tryToSendByte">
                       <steps xsi:type="lst:SequenceStep">
                         <steps xsi:type="lst:SequenceStep" name="SET(e.platform.bool@result, 0)">
-                          <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@6fc336">
+                          <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@9eb90d">
                             <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_bool">
                               <steps xsi:type="lst:SequenceStep">
                                 <steps xsi:type="lst:SequenceStep">
@@ -285,7 +124,7 @@
                                       <steps xsi:type="lst:SequenceStep">
                                         <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                         <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                          <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.1"/>
+                                          <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.1"/>
                                         </steps>
                                       </steps>
                                     </steps>
@@ -295,7 +134,7 @@
                                       <steps xsi:type="lst:SequenceStep" name="microchip.pic16.BCF">
                                         <steps xsi:type="lst:SequenceStep">
                                           <steps xsi:type="lst:InstructionStep" code="4096" width="14">
-                                            <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.1"/>
+                                            <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.1"/>
                                           </steps>
                                         </steps>
                                       </steps>
@@ -325,13 +164,13 @@
                           <steps xsi:type="lst:SequenceStep" name="microchip.pic16.GOTO">
                             <steps xsi:type="lst:SequenceStep">
                               <steps xsi:type="lst:InstructionStep" code="10240" width="14">
-                                <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.6"/>
+                                <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.6"/>
                               </steps>
                             </steps>
                           </steps>
                         </steps>
                         <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@410, e.platform.uint8@d)">
-                          <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@45b7e3">
+                          <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@32fe7e">
                             <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
                               <steps xsi:type="lst:SequenceStep">
                                 <steps xsi:type="lst:SequenceStep">
@@ -340,7 +179,7 @@
                                       <steps xsi:type="lst:SequenceStep">
                                         <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                         <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                          <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                          <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                         </steps>
                                       </steps>
                                     </steps>
@@ -349,7 +188,7 @@
                                     <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVF">
                                       <steps xsi:type="lst:SequenceStep">
                                         <steps xsi:type="lst:InstructionStep" code="2048" width="14">
-                                          <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                          <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                         </steps>
                                       </steps>
                                     </steps>
@@ -375,7 +214,7 @@
                           </steps>
                         </steps>
                         <steps xsi:type="lst:SequenceStep" name="SET(e.platform.bool@result, 1)">
-                          <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1db5a86">
+                          <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1fd6441">
                             <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_bool">
                               <steps xsi:type="lst:SequenceStep">
                                 <steps xsi:type="lst:SequenceStep">
@@ -384,7 +223,7 @@
                                       <steps xsi:type="lst:SequenceStep">
                                         <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                         <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                          <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.1"/>
+                                          <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.1"/>
                                         </steps>
                                       </steps>
                                     </steps>
@@ -394,7 +233,7 @@
                                       <steps xsi:type="lst:SequenceStep" name="microchip.pic16.BSF">
                                         <steps xsi:type="lst:SequenceStep">
                                           <steps xsi:type="lst:InstructionStep" code="5120" width="14">
-                                            <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.1"/>
+                                            <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.1"/>
                                           </steps>
                                         </steps>
                                       </steps>
@@ -416,7 +255,7 @@
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                             <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                              <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.1"/>
+                              <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.1"/>
                             </steps>
                           </steps>
                         </steps>
@@ -425,7 +264,7 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic16.BTFSC">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="6144" width="14">
-                              <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.1"/>
+                              <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.1"/>
                             </steps>
                           </steps>
                         </steps>
@@ -434,7 +273,7 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic16.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="10240" width="14">
-                              <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.4"/>
+                              <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.4"/>
                             </steps>
                           </steps>
                         </steps>
@@ -443,7 +282,7 @@
                         <steps xsi:type="lst:SequenceStep" name="microchip.pic16.GOTO">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:InstructionStep" code="10240" width="14">
-                              <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.6"/>
+                              <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.6"/>
                             </steps>
                           </steps>
                         </steps>
@@ -454,7 +293,7 @@
                   <steps xsi:type="lst:SequenceStep">
                     <steps xsi:type="lst:SequenceStep" name="SET(e.platform.uint8@d, ADD(e.platform.uint8@d, 1))">
                       <steps xsi:type="lst:SequenceStep" name="ADD(e.platform.uint8@d, 1)">
-                        <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1c7edce">
+                        <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1fa7a60">
                           <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
                             <steps xsi:type="lst:SequenceStep">
                               <steps xsi:type="lst:SequenceStep">
@@ -463,7 +302,7 @@
                                     <steps xsi:type="lst:SequenceStep">
                                       <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                       <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                        <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                        <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                       </steps>
                                     </steps>
                                   </steps>
@@ -472,7 +311,7 @@
                                   <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVF">
                                     <steps xsi:type="lst:SequenceStep">
                                       <steps xsi:type="lst:InstructionStep" code="2048" width="14">
-                                        <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                        <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                       </steps>
                                     </steps>
                                   </steps>
@@ -482,7 +321,7 @@
                                     <steps xsi:type="lst:SequenceStep">
                                       <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                       <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                        <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
+                                        <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
                                       </steps>
                                     </steps>
                                   </steps>
@@ -491,7 +330,7 @@
                                   <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVWF">
                                     <steps xsi:type="lst:SequenceStep">
                                       <steps xsi:type="lst:InstructionStep" code="128" width="14">
-                                        <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
+                                        <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
                                       </steps>
                                     </steps>
                                   </steps>
@@ -500,7 +339,7 @@
                             </steps>
                           </steps>
                         </steps>
-                        <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@2dbac8">
+                        <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1fa1df7">
                           <steps xsi:type="lst:SequenceStep" name="pic16.platform.add_u8">
                             <steps xsi:type="lst:SequenceStep">
                               <steps xsi:type="lst:SequenceStep">
@@ -517,7 +356,7 @@
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                     <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                      <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
+                                      <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
                                     </steps>
                                   </steps>
                                 </steps>
@@ -526,7 +365,7 @@
                                 <steps xsi:type="lst:SequenceStep" name="microchip.pic16.ADDWF">
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:InstructionStep" code="1920" width="14">
-                                      <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
+                                      <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.5/@steps.0/@variables.0"/>
                                     </steps>
                                   </steps>
                                 </steps>
@@ -535,24 +374,24 @@
                           </steps>
                         </steps>
                       </steps>
-                      <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1c39502">
+                      <steps xsi:type="lst:SequenceStep" name="{}hu.e.compiler.internal.model.symbols.impl.NullSymbol@1093702">
                         <steps xsi:type="lst:SequenceStep" name="pic16.platform.set_u8">
                           <steps xsi:type="lst:SequenceStep">
                             <steps xsi:type="lst:SequenceStep">
                               <steps xsi:type="lst:SequenceStep" name="Call SELECTB">
-                                <steps xsi:type="lst:StatusStep" severity="ERROR" message="Literal value does not have an address. at main line 26"/>
+                                <steps xsi:type="lst:StatusStep" severity="ERROR" message="Literal value does not have an address. at main line 15"/>
                                 <steps xsi:type="lst:SequenceStep" name="pic16.bankselect.SELECTB">
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
-                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@6cfb7d (name: f) (kind: default, default: null) at pic16.bankselect line 10"/>
+                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@dc15b6 (name: f) (kind: default, default: null) at pic16.bankselect line 10"/>
                                   </steps>
                                 </steps>
                               </steps>
                               <steps xsi:type="lst:SequenceStep" name="Call MOVF">
-                                <steps xsi:type="lst:StatusStep" severity="ERROR" message="Literal value does not have an address. at main line 26"/>
+                                <steps xsi:type="lst:StatusStep" severity="ERROR" message="Literal value does not have an address. at main line 15"/>
                                 <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVF">
                                   <steps xsi:type="lst:SequenceStep">
-                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@9fdb4a (name: f) (kind: default, default: null) at microchip.pic16 line 62"/>
+                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@11e60ab (name: f) (kind: default, default: null) at microchip.pic16 line 62"/>
                                   </steps>
                                 </steps>
                               </steps>
@@ -561,7 +400,7 @@
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
                                     <steps xsi:type="lst:InstructionStep" code="32" width="14">
-                                      <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                      <refs shift="7" size="5" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                     </steps>
                                   </steps>
                                 </steps>
@@ -570,7 +409,7 @@
                                 <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVWF">
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:InstructionStep" code="128" width="14">
-                                      <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@variables.0"/>
+                                      <refs size="7" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@variables.0"/>
                                     </steps>
                                   </steps>
                                 </steps>
@@ -587,7 +426,7 @@
                     <steps xsi:type="lst:SequenceStep" name="microchip.pic16.GOTO">
                       <steps xsi:type="lst:SequenceStep">
                         <steps xsi:type="lst:InstructionStep" code="10240" width="14">
-                          <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.7/@steps.0/@steps.0/@steps.1"/>
+                          <refs size="11" value="//@step/@steps.0/@steps.0/@steps.0/@steps.0/@steps.2/@steps.0/@steps.0/@steps.1"/>
                         </steps>
                       </steps>
                     </steps>
