@@ -22,8 +22,14 @@ main(){
 	/*
 	 * Set up oscillator to 32Mhz
 	 */
-	OSCCON = 0xF2;
-	OSCTUNE = 0x1F;
+	//OSCCON = 0xF2;
+	//OSCTUNE = 0x1F;
+	ANSELA = 0;
+	ANSELC = 0;
+	
+	TRISA = 0;
+	LATA = 1;
+	PORTA = 1;
 	
 	mainloop();
 }
