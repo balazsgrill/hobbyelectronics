@@ -11,7 +11,7 @@ mainloop(){
 	d = 0;
 	label start;
 	
-	if (tryToSendByte(d)){
+	if (tryToSendByte(5)){
 		d = d+1;
 	}
 	
@@ -22,14 +22,19 @@ main(){
 	/*
 	 * Set up oscillator to 32Mhz
 	 */
-	//OSCCON = 0xF2;
-	//OSCTUNE = 0x1F;
+	OSCCON = 0xF2;
+	OSCTUNE = 0x1F;
 	ANSELA = 0;
 	ANSELC = 0;
 	
 	TRISA = 0;
-	LATA = 1;
-	PORTA = 1;
+	TRISC = 0;
+	LATC = 0xFF;
+	LATA = 0xFF;
+	PORTA = 0xFF;
+	PORTC = 0xFF;
+	
+	initialize_uart();
 	
 	mainloop();
 }
