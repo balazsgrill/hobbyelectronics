@@ -467,7 +467,7 @@
                                 <steps xsi:type="lst:SequenceStep" name="pic16.bankselect.SELECTB">
                                   <steps xsi:type="lst:SequenceStep">
                                     <steps xsi:type="lst:AnnotationStep" key="pic16.bankselect.bankSelectOptimization"/>
-                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@291018 (name: f) (kind: default, default: null) at pic16.bankselect line 10"/>
+                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@1e86f52 (name: f) (kind: default, default: null) at pic16.bankselect line 10"/>
                                   </steps>
                                 </steps>
                               </steps>
@@ -475,7 +475,7 @@
                                 <steps xsi:type="lst:StatusStep" severity="ERROR" message="Literal value does not have an address. at main line 15"/>
                                 <steps xsi:type="lst:SequenceStep" name="microchip.pic16.MOVF">
                                   <steps xsi:type="lst:SequenceStep">
-                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@1f92e62 (name: f) (kind: default, default: null) at microchip.pic16 line 62"/>
+                                    <steps xsi:type="lst:StatusStep" severity="ERROR" message="Cannot resolve symbol: hu.e.parser.eSyntax.impl.ParameterVariableImpl@143f2fb (name: f) (kind: default, default: null) at microchip.pic16 line 62"/>
                                   </steps>
                                 </steps>
                               </steps>
