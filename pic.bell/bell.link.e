@@ -3,6 +3,7 @@ binary bell intelHexfile;
 use microchip.PIC16F1824;
 use microchip.pic16.enchanced;
 use bell.main;
+use bell.music.memory;
 
 program main(
 	startAddr = 0;
@@ -20,5 +21,5 @@ program main(
 		main();
 	}
 } at 0;
-
+include bell.music at musicAddress*2;
 include bell.config at configStartAddress*2;
