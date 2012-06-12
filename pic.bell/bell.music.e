@@ -6,6 +6,6 @@ data{
 	
 	1:uint16;
 	
-	5:uint16;10:uint16;
+	5:uint16;100:uint16;
 	
 } at 0;
