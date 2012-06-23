@@ -10,6 +10,16 @@ const uint16 musicAddress = 0x0800;
 uint16 index;
 uint16 num_of_steps;
 
+setRC2(){
+	SELECTB(&LATC);
+	BSF(&LATC,2);
+}
+
+clrRC2(){
+	SELECTB(&LATC);
+	BCF(&LATC,2);
+}
+
 tape_init(){
 	index = 0;
 	num_of_steps = read(musicAddress);
@@ -50,14 +60,18 @@ tape_step(){
 	time_count = time;
 	label start_count;
 	
-		
+		//SET output
+		setRC2();
+		wait(freq);
+		//CLR output
+		clrRC2();
+		wait(freq);
 	
 	time_count = time_count-1;
 	if(time_count != 0){
 		GOTO(start_count);
 	}
 	
-	//TODO: play freq until time
 }
 
 const bit CFGS = 6;
