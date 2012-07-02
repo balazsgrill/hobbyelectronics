@@ -13,7 +13,7 @@ program main(
 	mem 0x20..0x7f;
 	mem 0xA0..0xEF;
 	mem 0x120..0x16F;
-	//optimize "microchip.optimize.bankselect.pic16";
+	optimize "microchip.optimize.bankselect.pic16";
 ){
 	lib microchip.pic16.enchanced;
 	lib pic16.platform;
