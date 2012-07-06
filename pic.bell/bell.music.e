@@ -8,4 +8,4 @@ data{
 	
 	5:uint16;100:uint16;
 	
-} at 0;
+} at 0 width 2;
