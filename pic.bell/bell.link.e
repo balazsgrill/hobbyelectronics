@@ -21,5 +21,4 @@ program main(
 		main();
 	}
 } at 0 width 2;
-include bell.music at musicAddress width 2;
 include bell.config at configStartAddress width 2;

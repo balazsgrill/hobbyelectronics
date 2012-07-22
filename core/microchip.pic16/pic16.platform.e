@@ -46,6 +46,25 @@ add_u16(var uint16 d, uint16 v){
 	ADDWFC(&d+1);
 }
 
+set_u16_to_u8(var uint8 d, uint16 v){
+	if (isliteral(v)){
+		set_u8(d, v:uint8);
+	}else{
+		warning "Uint16 to Uint8 assignment may cause data loss!";
+		SELECTB(&v);
+		MOVF(&v,W);
+		SELECTB(&d);
+		MOVWF(&d);
+	}
+}
+
+set_u16_high(var uint8 d, var uint16 v){
+	SELECTB((&v)+1);
+	MOVF((&v)+1,W);
+	SELECTB(&d);
+	MOVWF(&d);	
+}
+
 set_u16(var uint16 d, uint16 v){
 	if (isliteral(v)){
 		if (0 == v){
@@ -120,11 +139,8 @@ equals_u8(uint8 d1, uint8 d2){
 
 checkEqual_u16(uint16 d1, uint16 d2, const bool not){
 	uint16 d;
-	if (isliteral(d2) && d2==0){
-		d = d1;
-	}else{
-		d = d1-d2; //Simply subtract
-	}
+	d = d1-d2; //Simply subtract
+	
 	//Put first byte into W
 	SELECTB(&d);
 	MOVF(&d,W);
@@ -309,5 +325,6 @@ operator SUBTRACT{
 
 operator SET{
 	set_u8,
-	set_u16
+	set_u16,
+	set_u16_to_u8
 }

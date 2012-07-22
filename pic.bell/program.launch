@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LAUNCH_CONFIGURATION_BUILD_SCOPE" value="${project}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="/home/balage/work/pk2cmd_v1.21/pk2cmdv1.20LinuxMacSource/pk2cmd"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-B/home/balage/work/pk2cmd_v1.21/pk2cmdv1.20LinuxMacSource/&#10;-PPIC16F1824&#10;-M&#10;-F${project_loc:pic.bell}/out/bell.hex&#10;-Y"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/pic.bell/out}"/>
+</launchConfiguration>
