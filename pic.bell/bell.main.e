@@ -36,7 +36,7 @@ main(){
 	 */
 	BTFSS(&PIR3, TMR4IF);
 	GOTO(notimer4);
-	tape_step();
+	CALL(func_tape_step);
 	label notimer4;
 	
 	// clear all interrupt request
@@ -68,9 +68,16 @@ main(){
 	TMR4 = 0;
 	
 	tape_init();
+	CALL(func_tape_step);
 	
 	loop();
 	
+	/*
+	 * tape_step is included here to be callable
+	 */
+	label func_tape_step;
+	tape_step();
+	RETURN();
 }
 
 loop(){
