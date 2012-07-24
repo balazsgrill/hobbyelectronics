@@ -6,13 +6,33 @@ use microchip.PIC16F1824;
 use pic16.bankselect;
 use pic16.platform;
 
-const uint16 musicAddress = 0x0800; 
-
-uint16 index;
-uint16 num_of_steps;
-
 const uint8 stepnum = 8;
-uint8 divider;
+
+tape_init(){
+	counter = 0;
+	index = 0;
+}
+
+uint8 counter;
+uint8 index;
+
+tape_step(){
+
+	if (counter == 0){
+		PR2 = freqs(index);
+		
+		counter = lengths(index);
+		
+		index += 1;
+		if (index == stepnum){
+			index = 0;
+		}
+		
+	}else{
+		counter -= 1;
+	}
+
+}
 
 freqs(uint8 d){
 	SELECTB(&d);
@@ -40,11 +60,7 @@ freqs(uint8 d){
 	MOVWF(&result);
 }returns uint8 result;
 
-lengths(uint8 d){
-	result = 0x01;
-}returns uint8 result;
 
-/*
 lengths(uint8 d){
 	SELECTB(&d);
 	MOVF(&d,W);
@@ -70,7 +86,7 @@ lengths(uint8 d){
 	SELECTB(&result);
 	MOVWF(&result);
 }returns uint8 result;
-*/
+
 
 toggleRC2(){
 	SELECTB(&LATC);
@@ -88,45 +104,5 @@ clrRC2(){
 	BCF(&LATC,2);
 }
 
-tape_init(){
-	//index = 0;
-	acounter = 0;
-	acounter2 = 0;
-	//num_of_steps = read(musicAddress);
-	aindex = 0;
-	divider = 0;
-}
 
-
-
-uint8 acounter;
-uint8 acounter2;
-uint8 aindex;
-
-tmr2_tape_step(){
-	if (acounter2 == 0){
-		acounter2 = divider;
-		
-		if (acounter == 0){
-		
-			uint16 dat;
-	
-			PR2 = freqs(aindex);
-			divider = 0xFF-PR2;
-		
-			acounter = lengths(aindex);
-		
-			aindex += 1;
-			if (aindex == stepnum){
-				aindex = 0;
-			}
-		
-		}else{
-			acounter -= 1;
-		}
-	
-	}else{
-		acounter2 -= 1;
-	}
-}
 
