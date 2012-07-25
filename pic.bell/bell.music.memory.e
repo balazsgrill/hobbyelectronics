@@ -5,6 +5,7 @@ use microchip.pic16.enchanced;
 use microchip.PIC16F1824;
 use pic16.bankselect;
 use pic16.platform;
+use music;
 
 const uint8 stepnum = 8;
 
@@ -19,9 +20,11 @@ uint8 index;
 tape_step(){
 
 	if (counter == 0){
-		PR2 = freqs(index);
+		PR2 = table_PR;
+		T2CON = table_TCON;
+		TMR2 = 0;
 		
-		counter = lengths(index);
+		counter = 0xFF;
 		
 		index += 1;
 		if (index == stepnum){
@@ -33,59 +36,6 @@ tape_step(){
 	}
 
 }
-
-freqs(uint8 d){
-	SELECTB(&d);
-	MOVF(&d,W);
-	CALL(dat);
-	GOTO(end);
-	label dat;
-	BRW();
-	RETLW(0x30);
-	RETLW(0x30);
-	RETLW(0x80);
-	RETLW(0x50);
-	RETLW(0x80);
-	RETLW(0x50);
-	RETLW(0x80);
-	RETLW(0x90);
-	RETLW(0xA0);
-	RETLW(0xB0);
-	RETLW(0xC0);
-	RETLW(0xD0);
-	RETLW(0xE0);
-	RETLW(0xF0);
-	label end;
-	SELECTB(&result);
-	MOVWF(&result);
-}returns uint8 result;
-
-
-lengths(uint8 d){
-	SELECTB(&d);
-	MOVF(&d,W);
-	CALL(dat);
-	GOTO(end);
-	label dat;
-	BRW();
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	RETLW(0x0F);
-	label end;
-	SELECTB(&result);
-	MOVWF(&result);
-}returns uint8 result;
 
 
 toggleRC2(){
