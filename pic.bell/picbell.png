@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"/>
+  <title>CircuitLab - Error 403: Forbidden</title>
+
+  <!-- CSS --> 
+  <link href="/assets/css/public.css" rel="stylesheet"/>
+</head> 
+ 
+<body> 
+  <!-- ====================================================== -->
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <div id="logoholder">
+          <a href="/">
+            <img src="/assets/images/topbar_logo_60_2x.png" width="196" height="60" alt="CircuitLab" style="width:196px;height:60px;"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ====================================================== -->
+  <!-- CONTENT -->
+  <div class="container">
+
+<!-- ====================== BEGIN CONTENT BLOCK ============= -->  
+
+<div class="page-header">
+  <h1>Error 403: Forbidden</h1>
+</div>
+
+<div class="row">
+  <div class="span3 columns">
+    <p>
+      Hey buddy... whatcha lookin' for?  Looks to me like you aren't
+      supposed to be pokin' around here.
+    </p>
+    <p>
+      <a href="/accounts/login/">Log in</a>
+      or go back to the
+      <a href="/">home page</a>.
+    </p>
+  </div>
+  <div class="span9 columns">
+    <img src="/assets/images/error_sadface.png" width="700" height="200" alt="Error :-(" class="fun_image"/>
+  </div>
+</div>
+
+<hr/>
+<!-- ====================== END CONTENT BLOCK =============== -->  
+
+  </div> <!-- /content container -->
+</body>
+</html>
