@@ -46,7 +46,8 @@ main(){
 	RETFIE();
 	
 	label init;
-	OSCCON = b01111011;
+	//set 1MHz
+	OSCCON = b01011011;
 	ANSELA = 0;
 	ANSELC = 0;
 	
