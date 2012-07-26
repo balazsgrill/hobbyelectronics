@@ -20,8 +20,8 @@ uint8 index;
 tape_step(){
 
 	if (counter == 0){
-		PR2 = table_PR;
-		T2CON = table_TCON;
+		PR2 = table_PR(index);
+		T2CON = table_TCON(index);
 		TMR2 = 0;
 		
 		counter = 0xFF;
