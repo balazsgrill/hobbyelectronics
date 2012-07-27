@@ -83,6 +83,7 @@ main(){
 
 loop(){
 	label start;
+	CLRWDT();
 	GOTO(start);
 }
 
