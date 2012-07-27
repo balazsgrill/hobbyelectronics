@@ -55,6 +55,11 @@ sounds = []
 for f in frequencies:
     sounds.append([f, findFreq(f[2])])
    
+music_test = [
+              [0, 'A'],
+              [0, 'off']
+              ]   
+   
 music_boci = [
               [0, 'D'],
               [0, 'F'],
@@ -85,11 +90,13 @@ music_boci = [
               [0, 'D']
               ]   
 
-music = music_boci
+#music = music_boci
+music = music_test
+
 tape = []
 
 for step in music:
-    soundstep = []
+    soundstep = [0, 0]
     for sound in sounds:
         if (sound[0][0] == step[0] and sound[0][1] == step[1]):
             soundstep = [sound[1][0], sound[1][1], sound[1][2]]
@@ -114,9 +121,11 @@ tapefile.write('}returns uint8 result;\n')
 tapefile.write('\ntable_TCON(uint8 index){\n')
 tapefile.write('\tSELECTB(&index);\n\tMOVF(&index,W);\n\tCALL(dat);\n\tGOTO(end);\n\tlabel dat;\n\tBRW();\n');
 for d in tape:
-    pre = math.log(d[1],4)
-    post = d[2]-1
-    value = pre + 4 + (post*8)
+    value = 0
+    if len(d) == 3:
+        pre = math.log(d[1],4)
+        post = d[2]-1
+        value = pre + 4 + (post*8)
     tapefile.write('\tRETLW(0x%(v)X);\n' % {'v' : value})
 tapefile.write('\tlabel end;\n\tSELECTB(&result);\n\tMOVWF(&result);\n')
 tapefile.write('}returns uint8 result;\n')

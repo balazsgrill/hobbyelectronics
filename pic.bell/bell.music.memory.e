@@ -7,8 +7,6 @@ use pic16.bankselect;
 use pic16.platform;
 use music;
 
-const uint8 stepnum = 8;
-
 tape_init(){
 	counter = 0;
 	index = 0;
@@ -27,7 +25,7 @@ tape_step(){
 		counter = 0xFF;
 		
 		index += 1;
-		if (index == stepnum){
+		if (index == music.length){
 			index = 0;
 		}
 		
