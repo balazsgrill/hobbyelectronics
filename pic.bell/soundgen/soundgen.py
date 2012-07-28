@@ -54,52 +54,96 @@ for i in range(4):
 sounds = []
 for f in frequencies:
     sounds.append([f, findFreq(f[2])])
+
+music_octave = [
+                [0, 'C',2],
+                [0, 'off',1],
+                [0, 'D',2],
+                [0, 'off',1],
+                [0, 'E',2],
+                [0, 'off',1],
+                [0, 'F',2],
+                [0, 'off',1],
+                [0, 'G',2],
+                [0, 'off',1],
+                [0, 'A',2],
+                [0, 'off',1],
+                [0, 'B',2],
+                [0, 'off',1],
+                [1, 'C',2],
+                [0, 'off',1],
+                ]
    
 music_test = [
-              [0, 'A'],
-              [0, 'off']
+              [0, 'A',2],
+              [0, 'off',2]
               ]   
    
 music_boci = [
-              [0, 'D'],
-              [0, 'F'],
-              [0, 'D'],
-              [0, 'F'],
-              [0, 'A'],
-              [0, 'A'],
+              [0, 'C',2],
+              [0, 'off',0],
+              [0, 'E',2],
+              [0, 'off',0],
+              [0, 'C',2],
+              [0, 'off',0],
+              [0, 'E',2],
+              [0, 'off',0],
+              [0, 'G',4],
+              [0, 'off',0],
+              [0, 'G',4],
+              [0, 'off',0],
               
-              [0, 'D'],
-              [0, 'F'],
-              [0, 'D'],
-              [0, 'F'],
-              [0, 'A'],
-              [0, 'A'],
+              [0, 'C',2],
+              [0, 'off',0],
+              [0, 'E',2],
+              [0, 'off',0],
+              [0, 'C',2],
+              [0, 'off',0],
+              [0, 'E',2],
+              [0, 'off',0],
+              [0, 'G',4],
+              [0, 'off',0],
+              [0, 'G',4],
+              [0, 'off',0],
               
-              [1, 'D'],
-              [1, 'C'],
-              [0, 'B'],
-              [0, 'A'],
-              [0, 'G'],
-              [0, 'B'],
+              [1, 'C',2],
+              [0, 'off',0],
+              [0, 'B',2],
+              [0, 'off',0],
+              [0, 'A',2],
+              [0, 'off',0],
+              [0, 'G',2],
+              [0, 'off',0],
+              [0, 'F',4],
+              [0, 'off',0],
+              [0, 'A',4],
+              [0, 'off',0],
               
-              [0, 'A'],
-              [0, 'G'],
-              [0, 'F'],
-              [0, 'E'],
-              [0, 'D'],
-              [0, 'D']
+              [0, 'G',2],
+              [0, 'off',0],
+              [0, 'F',2],
+              [0, 'off',0],
+              [0, 'E',2],
+              [0, 'off',0],
+              [0, 'D',2],
+              [0, 'off',0],
+              [0, 'C',4],
+              [0, 'off',0],
+              [0, 'C',4],
+              [0, 'off',4],
               ]   
 
-#music = music_boci
-music = music_test
+music = music_boci
+#music = music_test
+#music = music_octave
 
 tape = []
 
 for step in music:
-    soundstep = [0, 0]
+    soundstep = [0, 0, 0, step[2], 'off']
     for sound in sounds:
         if (sound[0][0] == step[0] and sound[0][1] == step[1]):
-            soundstep = [sound[1][0], sound[1][1], sound[1][2]]
+            soundstep = [sound[1][0], sound[1][1], sound[1][2], step[2]]
     tape.append(soundstep)
 
 tapefile = open('music.e', 'w')
@@ -122,11 +166,18 @@ tapefile.write('\ntable_TCON(uint8 index){\n')
 tapefile.write('\tSELECTB(&index);\n\tMOVF(&index,W);\n\tCALL(dat);\n\tGOTO(end);\n\tlabel dat;\n\tBRW();\n');
 for d in tape:
     value = 0
-    if len(d) == 3:
+    if len(d) == 4:
         pre = math.log(d[1],4)
         post = d[2]-1
         value = pre + 4 + (post*8)
     tapefile.write('\tRETLW(0x%(v)X);\n' % {'v' : value})
+tapefile.write('\tlabel end;\n\tSELECTB(&result);\n\tMOVWF(&result);\n')
+tapefile.write('}returns uint8 result;\n')
+
+tapefile.write('\ntable_counter(uint8 index){\n')
+tapefile.write('\tSELECTB(&index);\n\tMOVF(&index,W);\n\tCALL(dat);\n\tGOTO(end);\n\tlabel dat;\n\tBRW();\n');
+for d in tape:
+    tapefile.write('\tRETLW(0x%(v)X);\n' % {'v' : d[3]})
 tapefile.write('\tlabel end;\n\tSELECTB(&result);\n\tMOVWF(&result);\n')
 tapefile.write('}returns uint8 result;\n')
 

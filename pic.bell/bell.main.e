@@ -53,7 +53,7 @@ main(){
 	
 	label init;
 	//set 1MHz
-	OSCCON = b01011011;
+	OSCCON = b01110011;
 	ANSELA = 0;
 	ANSELC = 0;
 	

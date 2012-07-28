@@ -24,7 +24,7 @@ toggleRC3();
 		T2CON = table_TCON(index);
 		TMR2 = 0;
 		
-		counter = 0x0;
+		counter = table_counter(index);
 		
 		index += 1;
 		if (index == music.length){
