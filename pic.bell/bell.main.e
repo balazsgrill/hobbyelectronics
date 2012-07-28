@@ -23,9 +23,12 @@ main(){
 	/*3*/ NOP();
 	/*4*/ label interrupt;
 	
+	
+	
 	/*
 	 * TIMER2 interrupt
 	 */
+	SELECTB(&PIR1);
 	BTFSS(&PIR1, TMR2IF);
 	GOTO(notimer2);
 	toggleRC2();
@@ -34,15 +37,18 @@ main(){
 	/*
 	 * TIMER4 interrupt
 	 */
+	SELECTB(&PIR3);
 	BTFSS(&PIR3, TMR4IF);
 	GOTO(notimer4);
 	CALL(func_tape_step);
+	//tape_step();
 	label notimer4;
 	
 	// clear all interrupt request
 	PIR1 = 0;
 	PIR2 = 0;
 	PIR3 = 0;
+	toggleRC4();
 	RETFIE();
 	
 	label init;
@@ -70,6 +76,7 @@ main(){
 	
 	tape_init();
 	CALL(func_tape_step);
+	//tape_step();
 	
 	loop();
 	

@@ -17,12 +17,14 @@ uint8 index;
 
 tape_step(){
 
+toggleRC3();
 	if (counter == 0){
+		clrRC2();
 		PR2 = table_PR(index);
 		T2CON = table_TCON(index);
 		TMR2 = 0;
 		
-		counter = 0xFF;
+		counter = 0x0;
 		
 		index += 1;
 		if (index == music.length){
@@ -39,6 +41,18 @@ tape_step(){
 toggleRC2(){
 	SELECTB(&LATC);
 	MOVLW(4); //Bit 2
+	XORWF(&LATC);
+}
+
+toggleRC3(){
+	SELECTB(&LATC);
+	MOVLW(8); //Bit 3
+	XORWF(&LATC);
+}
+
+toggleRC4(){
+	SELECTB(&LATC);
+	MOVLW(16); //Bit 4
 	XORWF(&LATC);
 }
 

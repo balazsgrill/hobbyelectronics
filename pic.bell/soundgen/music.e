@@ -13,7 +13,7 @@ table_PR(uint8 index){
 	GOTO(end);
 	label dat;
 	BRW();
-	RETLW(0x47);
+	RETLW(0x27);
 	RETLW(0x0);
 	label end;
 	SELECTB(&result);
