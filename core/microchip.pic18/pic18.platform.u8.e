@@ -79,6 +79,13 @@ branch_u8(var uint8 condition, const uint16 true, const uint16 false){
 	GOTO(false);
 }
 
+branch_u8bit(u8bit condition, const uint16 true, const uint16 false){
+	SELECTB(condition->a);
+	BTFSC(condition->a,condition->d);
+	GOTO(true);
+	GOTO(false);
+}
+
 branch_bool(var bool condition, const uint16 true, const uint16 false){
 	SELECTB(&condition);
 	BTFSC(&condition,0);

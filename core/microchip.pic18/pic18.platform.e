@@ -16,7 +16,8 @@ operator SUBTRACT{
 
 operator BRANCH{
 	branch_u8,
-	branch_bool
+	branch_bool,
+	branch_u8bit
 }
 
 operator UC_GOTO{

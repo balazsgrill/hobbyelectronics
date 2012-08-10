@@ -16,6 +16,14 @@ type address = unsigned 12 bits;
 type codeaddr = unsigned 20 bits;
 
 /*
+ * A bit in an uint8
+ */
+type u8bit = struct{
+	address a,
+	bit b
+};
+
+/*
  * Optimizer: microchip.optimize.bankselect.pic18
  */
 annotation bankSelectOptimization;
