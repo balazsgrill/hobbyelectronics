@@ -172,23 +172,23 @@ reg uint8 usb_bd5in_stat 	: &usb_bd5in;
 reg uint8 usb_bd5in_cnt   	: &usb_bd5in+1;
 reg uint16 usb_bd5in_addr 	: &usb_bd5in+2;
 
-const u8bit EP1STALL	= microchip.pic18.u8bit{&UEP1,0};
-const u8bit EP1INEN		= microchip.pic18.u8bit{&UEP1,1};
-const u8bit EP1OUTEN	= microchip.pic18.u8bit{&UEP1,2};
-const u8bit EP1CONDIS	= microchip.pic18.u8bit{&UEP1,3};
-const u8bit EP1HSHK		= microchip.pic18.u8bit{&UEP1,4};
+const u8bit EP1STALL	= u8bit{&UEP1,0};
+const u8bit EP1INEN		= u8bit{&UEP1,1};
+const u8bit EP1OUTEN	= u8bit{&UEP1,2};
+const u8bit EP1CONDIS	= u8bit{&UEP1,3};
+const u8bit EP1HSHK		= u8bit{&UEP1,4};
 
-const u8bit EP2STALL	= microchip.pic18.u8bit{&UEP2,0};
-const u8bit EP2INEN		= microchip.pic18.u8bit{&UEP2,1};
-const u8bit EP2OUTEN	= microchip.pic18.u8bit{&UEP2,2};
-const u8bit EP2CONDIS	= microchip.pic18.u8bit{&UEP2,3};
-const u8bit EP2HSHK		= microchip.pic18.u8bit{&UEP2,4};
+const u8bit EP2STALL	= u8bit{&UEP2,0};
+const u8bit EP2INEN		= u8bit{&UEP2,1};
+const u8bit EP2OUTEN	= u8bit{&UEP2,2};
+const u8bit EP2CONDIS	= u8bit{&UEP2,3};
+const u8bit EP2HSHK		= u8bit{&UEP2,4};
 
-const u8bit EP3STALL	= microchip.pic18.u8bit{&UEP3,0};
-const u8bit EP3INEN		= microchip.pic18.u8bit{&UEP3,1};
-const u8bit EP3OUTEN	= microchip.pic18.u8bit{&UEP3,2};
-const u8bit EP3CONDIS	= microchip.pic18.u8bit{&UEP3,3};
-const u8bit EP3HSHK		= microchip.pic18.u8bit{&UEP3,4};
+const u8bit EP3STALL	= u8bit{&UEP3,0};
+const u8bit EP3INEN		= u8bit{&UEP3,1};
+const u8bit EP3OUTEN	= u8bit{&UEP3,2};
+const u8bit EP3CONDIS	= u8bit{&UEP3,3};
+const u8bit EP3HSHK		= u8bit{&UEP3,4};
 
 //----------------------------------------------------
 const uint8 USB_DEVICE_DESCRIPTOR_SIZE = 18;
