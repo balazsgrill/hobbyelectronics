@@ -56,4 +56,5 @@
     <platformLibs name="microchip.pic16.enchanced"/>
     <platformLibs name="pic16.platform"/>
   </contents>
+  <contents xsi:type="architecture:Optimizer" name="BankSelect" id="microchip.optimize.bankselect.pic16" architecture="//@contents.1"/>
 </core:Package>
