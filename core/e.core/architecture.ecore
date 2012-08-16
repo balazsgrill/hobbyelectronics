@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="architecture" nsURI="http://architecture/1.0" nsPrefix="architecture">
-  <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="modembedmodel.ecore#//core/PackagedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="modembedmodel.ecore#//core/PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memWidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pointerType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codePointerType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memory" upperBound="-1"
+        eType="#//MemorySegment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platformLibs" upperBound="-1"
+        eType="#//LibraryReference" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Optimizer" eSuperTypes="modembedmodel.ecore#//core/PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architecture" eType="#//Architecture"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkerDescription" eSuperTypes="modembedmodel.ecore#//core/PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architecture" eType="#//Architecture"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optimizers" upperBound="-1"
+        eType="#//Optimizer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mainFunction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memory" upperBound="-1"
+        eType="#//MemorySegment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedLibs" upperBound="-1"
+        eType="#//LibraryReference" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MemorySegment" eSuperTypes="modembedmodel.ecore#//core/NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LibraryReference" eSuperTypes="modembedmodel.ecore#//core/NamedElement"/>
 </ecore:EPackage>

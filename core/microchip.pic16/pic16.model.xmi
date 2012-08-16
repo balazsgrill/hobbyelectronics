@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<core:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:assembler="http://modembed.hu/core/assembler" xmlns:core="http://modembed.hu/core" name="root">
+<core:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture="http://architecture/1.0" xmlns:assembler="http://modembed.hu/core/assembler" xmlns:core="http://modembed.hu/core" name="root">
   <contents xsi:type="assembler:InstructionSet" name="PIC16InstructionSet">
     <instructions name="ADDWF" code="000111dfffffff"/>
     <instructions name="ANDWF" code="000101dfffffff"/>
@@ -51,5 +51,9 @@
     <instructions name="RESET" code="00000000000001"/>
     <instructions name="TRIS" code="00000001100fff"/>
     <instructions name="ADDFSR" code="1100010nkkkkkk"/>
+  </contents>
+  <contents xsi:type="architecture:Architecture" name="PIC16Enchanced" memWidth="8" pointerType="address" codePointerType="codeaddr">
+    <platformLibs name="microchip.pic16.enchanced"/>
+    <platformLibs name="pic16.platform"/>
   </contents>
 </core:Package>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture="http://architecture/1.0" xmlns:core="http://modembed.hu/core" name="bell">
+  <contents xsi:type="architecture:LinkerDescription" name="bell" mainFunction="main">
+    <architecture href="../microchip.pic16/pic16.model.xmi#//@contents.1"/>
+  </contents>
+</core:Package>
