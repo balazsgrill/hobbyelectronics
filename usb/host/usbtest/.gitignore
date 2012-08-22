@@ -2,3 +2,5 @@
 /listdevs.exe
 /listdevs.o
 /xusb.exe
+/usbtest.o
+/usbtest.exe

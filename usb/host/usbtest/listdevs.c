@@ -38,6 +38,7 @@ static void print_devs(libusb_device **devs)
 		printf("%04x:%04x (bus %d, device %d)\n",
 			desc.idVendor, desc.idProduct,
 			libusb_get_bus_number(dev), libusb_get_device_address(dev));
+
 	}
 }
 
@@ -54,6 +55,8 @@ int main(void)
 	cnt = libusb_get_device_list(NULL, &devs);
 	if (cnt < 0)
 		return (int) cnt;
+
+
 
 	print_devs(devs);
 	libusb_free_device_list(devs, 1);
