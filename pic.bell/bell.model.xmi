@@ -3,6 +3,5 @@
   <contents xsi:type="architecture:LinkerDescription" name="bell" mainFunction="main">
     <architecture href="../microchip.pic16/pic16.model.xmi#//@contents.1"/>
     <optimizers href="../microchip.pic16/pic16.model.xmi#//@contents.2"/>
-    <linkedLibs/>
   </contents>
 </core:Package>
