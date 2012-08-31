@@ -69,7 +69,7 @@ int main(int argc, char** argv)
 						printf("\t\t\tAlternative %d Class 0x%02x\n", k, config->interface[l].altsetting[k].bInterfaceClass);
 						int m;
 						for(m = 0;m<config->interface[l].altsetting[k].bNumEndpoints;m++){
-							printf("\t\t\t\tEndpoint %d Address 0x%04x\n", m, config->interface[l].altsetting[k].endpoint[m].bEndpointAddress);
+							printf("\t\t\t\tEndpoint %d Address 0x%04x Length %d\n", m, config->interface[l].altsetting[k].endpoint[m].bEndpointAddress, config->interface[l].altsetting[k].endpoint[m].bLength);
 						}
 					}
 				}
