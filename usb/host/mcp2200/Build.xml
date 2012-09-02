@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="mcp2200cli" name="MCP2200">
+	
+	<!-- ================================= 
+          target: mcp2200cli              
+         ================================= -->
+    <target name="mcp2200cli" depends="BuildWindows, BuildUnix" description="MCP2200 Command line interface">
+        
+    </target>
+
+	<condition property="isWin32" value="true">
+		<os family="windows"/>
+	</condition>
+			
+	<condition property="isUnix" value="true">
+		<os family="unix"/>
+	</condition>
+	
+	<target name="BuildWindows" if="isWin32">
+		<echo>Build for win32</echo>
+	</target>
+	
+	<target name="BuildUnix" if="isUnix">
+		<echo>Build for Unix</echo>
+		<mkdir dir="bin"/>
+		<exec executable="gcc">
+			<arg value="-c"/>
+			<arg value="-o"/><arg value="bin/mcp2200cli.o"/>
+			<arg value="-I/usr/include/libusb-1.0"/>
+			<arg value="src/mcp2200cli.c"/>
+		</exec>
+		<exec executable="gcc">
+			<arg value="-Wall"/>
+			<arg value="-o"/><arg value="bin/mcp2200cli"/>			
+
+			<arg value="bin/mcp2200cli.o"/>
+			
+			<arg value="-lusb-1.0"/>
+			<arg value="-lrt"/>
+			<arg value="-lpthread"/>
+		</exec>
+	</target>
+	
+</project>
