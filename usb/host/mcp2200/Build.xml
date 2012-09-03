@@ -5,7 +5,7 @@
           target: mcp2200cli              
          ================================= -->
     <target name="mcp2200cli" depends="BuildWindows, BuildUnix" description="MCP2200 Command line interface">
-        
+        <echo>done.</echo>
     </target>
 
 	<condition property="isWin32" value="true">
@@ -18,6 +18,20 @@
 	
 	<target name="BuildWindows" if="isWin32">
 		<echo>Build for win32</echo>
+		<mkdir dir="bin"/>
+		<exec executable="gcc">
+			<arg value="-c"/>
+			<arg value="-Wall"/>
+			<arg value="-o"/><arg value="bin/mcp2200cli.o"/>
+			<arg value="-Iinclude/win32"/>
+			<arg value="src/mcp2200cli.c"/>
+		</exec>
+		<exec executable="gcc">
+			<arg value="-Wall"/>
+			<arg value="-o"/><arg value="bin/mcp2200cli"/>			
+			<arg value="bin/mcp2200cli.o"/>
+			<arg value="lib/win32/libusb-1.0.a"/>
+		</exec>
 	</target>
 	
 	<target name="BuildUnix" if="isUnix">
