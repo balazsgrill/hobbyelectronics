@@ -34,7 +34,7 @@ static void closeDevice(int connectionID){
 }
 
 int mcp2200_hid_read_io(int connectionID, uint8_t *data){
-	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connectionID >= MCP2200_MAX_DEVICE_NUM) return -1;
 	if (connection_list[connectionID] == NULL) return -2;
 
 	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
@@ -67,7 +67,7 @@ int mcp2200_hid_read_io(int connectionID, uint8_t *data){
 }
 
 int mcp2200_hid_read_ee(int connectionID, uint8_t address, uint8_t *data){
-	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connectionID >= MCP2200_MAX_DEVICE_NUM) return -1;
 	if (connection_list[connectionID] == NULL) return -2;
 
 	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
@@ -101,7 +101,7 @@ int mcp2200_hid_read_ee(int connectionID, uint8_t address, uint8_t *data){
 }
 
 int mcp2200_hid_write_ee(int connectionID, uint8_t address, uint8_t data){
-	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connectionID >= MCP2200_MAX_DEVICE_NUM) return -1;
 		if (connection_list[connectionID] == NULL) return -2;
 
 		uint8_t buffer[MCP2200_HID_REPORT_SIZE];
@@ -131,7 +131,7 @@ int mcp2200_hid_configure(int connectionID,
 		uint16_t baudRate
 		){
 
-	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connectionID >= MCP2200_MAX_DEVICE_NUM) return -1;
 	if (connection_list[connectionID] == NULL) return -2;
 
 	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
@@ -157,7 +157,7 @@ int mcp2200_hid_configure(int connectionID,
 }
 
 int mcp2200_hid_set_clear_output(int connectionID, uint8_t set_bmap, uint8_t clr_bmap){
-	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connectionID >= MCP2200_MAX_DEVICE_NUM) return -1;
 	if (connection_list[connectionID] == NULL) return -2;
 
 	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
@@ -255,17 +255,25 @@ static int findEmptyConnectionSlot(){
 int mcp2200_connect(int index){
 	if (index < device_list_count){
 		int conID = findEmptyConnectionSlot();
-		if (conID > 0){
+		if (conID >= 0){
 			int r = libusb_open(device_list[index], &connection_list[conID]);
+			printf("%d\n",r);
 			if (r < 0) return r;
+
+			libusb_detach_kernel_driver(connection_list[conID], MCP2200_HID_INTERFACE);
+			//printf("%d\n",r);
+			//if (r < 0) return r;
+
 			// Set configuration
-			r = libusb_set_configuration(connection_list[conID], MCP2200_USE_CONFIGURATION);
+			//r = libusb_set_configuration(connection_list[conID], MCP2200_USE_CONFIGURATION);
+			printf("%d\n",r);
 			if (r != 0){
 				closeDevice(conID);
 				return r;
 			}
 			// Claim HID interface
 			r = libusb_claim_interface(connection_list[conID], MCP2200_HID_INTERFACE);
+			printf("%d\n",r);
 			if (r != 0){
 				closeDevice(conID);
 				return r;

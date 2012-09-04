@@ -26,21 +26,38 @@ int main(int argc, char** argv){
 
 	if (cnt == 1){
 		int address = mcp2200_get_address(0);
-		printf("Opening at address 0x%x", address);
+		printf("Opening at address 0x%x\n", address);
 
 		int connectionID = mcp2200_connect(0);
 
 		if (connectionID < 0){
-			printf("Connection failed!");
+			printf("Connection failed! Error code: %d\n", connectionID);
 			return 0;
 		}
 
+		r = mcp2200_hid_configure(connectionID, 0, 0, 0, 0, 1000);
+		if (r != 0){
+			printf("Configure error: %d\n", r);
+		}
+
 		int i;
+		for(i=0;i<=255;i++){
+			uint8_t data;
+			r = mcp2200_hid_read_ee(connectionID, i, &data);
+			if (r != 0){
+				printf("read error of %d: %d\n",i, r);
+			}else{
+				printf("%d: %d\n",i,data);
+			}
+		}
+
 		for(i=0;i<100;i++){
-			printf("Set");
+			printf("Set\n");
 			mcp2200_hid_set_clear_output(connectionID, 0xFFu, 0u);
-			printf("Clear");
+			sleep(1);
+			printf("Clear\n");
 			mcp2200_hid_set_clear_output(connectionID, 0u, 0xFFu);
+			sleep(1);
 		}
 
 	}else{
