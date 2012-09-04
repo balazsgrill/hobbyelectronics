@@ -7,7 +7,18 @@
     <target name="mcp2200cli" depends="BuildWindows, BuildUnix" description="MCP2200 Command line interface">
         <echo>done.</echo>
     </target>
-
+	
+	<filelist dir="src" id="sourcefiles">
+		<file name="mcp2200.c"/>
+		<file name="mcp2200cli.c"/>
+	</filelist>
+	<mapper id="objectfiles" type="glob" from="*.c" to="bin/*.o">
+	</mapper>
+	<pathconvert pathsep=" " property="objects">
+		<mapper type="glob" from="${basedir}${file.separator}src${file.separator}*.c" to="bin/*.o"></mapper>
+		<filelist refid="sourcefiles" />
+	</pathconvert>
+	
 	<condition property="isWin32" value="true">
 		<os family="windows"/>
 	</condition>
@@ -19,17 +30,20 @@
 	<target name="BuildWindows" if="isWin32">
 		<echo>Build for win32</echo>
 		<mkdir dir="bin"/>
-		<exec executable="gcc">
+		<apply executable="gcc">
 			<arg value="-c"/>
 			<arg value="-Wall"/>
-			<arg value="-o"/><arg value="bin/mcp2200cli.o"/>
 			<arg value="-Iinclude/win32"/>
-			<arg value="src/mcp2200cli.c"/>
-		</exec>
+			<arg value="-o"/><targetfile/>
+			<srcfile/>
+			<filelist refid="sourcefiles"/>
+			<mapper refid="objectfiles" />
+		</apply>
 		<exec executable="gcc">
 			<arg value="-Wall"/>
-			<arg value="-o"/><arg value="bin/mcp2200cli"/>			
-			<arg value="bin/mcp2200cli.o"/>
+			<arg value="-o"/><arg value="bin/mcp2200cli.exe"/>			
+			
+			<arg line="${objects}"/>
 			<arg value="lib/win32/libusb-1.0.a"/>
 		</exec>
 	</target>
@@ -37,18 +51,20 @@
 	<target name="BuildUnix" if="isUnix">
 		<echo>Build for Unix</echo>
 		<mkdir dir="bin"/>
-		<exec executable="gcc">
+		<apply executable="gcc">
 			<arg value="-c"/>
-			<arg value="-o"/><arg value="bin/mcp2200cli.o"/>
+			<arg value="-Wall"/>
 			<arg value="-I/usr/include/libusb-1.0"/>
-			<arg value="src/mcp2200cli.c"/>
-		</exec>
+			<arg value="-o"/><targetfile/>
+			<srcfile/>
+			<filelist refid="sourcefiles"/>
+			<mapper refid="objectfiles" />
+		</apply>
 		<exec executable="gcc">
 			<arg value="-Wall"/>
 			<arg value="-o"/><arg value="bin/mcp2200cli"/>			
-
-			<arg value="bin/mcp2200cli.o"/>
 			
+			<arg line="${objects}"/>
 			<arg value="-lusb-1.0"/>
 			<arg value="-lrt"/>
 			<arg value="-lpthread"/>

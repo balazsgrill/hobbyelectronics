@@ -8,40 +8,31 @@
 #include <stdio.h>
 #include <sys/types.h>
 
-#include <libusb.h>
 #include "mcp2200.h"
 
 int main(int argc, char** argv){
 
-	libusb_device **devs;
-
-	int r = libusb_init(NULL);
+	int r = mcp2200_init();
 	if (r < 0)
 		return r;
 
-	int cnt = libusb_get_device_list(NULL, &devs);
-	if (cnt < 0)
-		return (int) cnt;
+	int cnt = mcp2200_list_devices(MCP2200_VENDOR_ID, MCP2200_PRODUCT_ID);
+	if (cnt < 0) return cnt;
 
 	int i;
 	for(i =0;i<cnt;i++){
-			struct libusb_device_descriptor desc;
+			int address = mcp2200_get_address(i);
+			printf("Device at %d\n", address);
 
-			int r = libusb_get_device_descriptor(devs[i], &desc);
-			if (r < 0) {
-				fprintf(stderr, "failed to get device descriptor");
-				return r;
+			int conID = mcp2200_connect(i);
+			if (conID >= 0){
+				printf("Open success!\n");
+				mcp2200_disconnect(conID);
+			}else{
+				printf("Cannot open\n");
 			}
-
-			if (MCP2200_VENDOR_ID == desc.idVendor && MCP2200_PRODUCT_ID == desc.idProduct){
-				printf("%04x:%04x (bus %d, device %d)\n",
-						desc.idVendor, desc.idProduct,
-						libusb_get_bus_number(devs[i]), libusb_get_device_address(devs[i]));
-			}
-
 	}
 
-	libusb_free_device_list(devs, 1);
-	libusb_exit(NULL);
+	mcp2200_close();
 	return 0;
 }
