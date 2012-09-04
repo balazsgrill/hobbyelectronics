@@ -45,4 +45,35 @@ extern int mcp2200_connect(int index);
  */
 extern void mcp2200_disconnect(int connectionID);
 
+/**
+ * Set/Clear the output pins
+ */
+extern int mcp2200_hid_set_clear_output(int connectionID, uint8_t set_bmap, uint8_t clr_bmap);
+
+/**
+ * Configure all settings
+ */
+extern int mcp2200_hid_configure(int connectionID,
+		uint8_t IO_bmap,
+		uint8_t config_alt_pins,
+		uint8_t IO_default_pins,
+		uint8_t config_alt_options,
+		uint16_t baudRate
+		);
+
+/**
+ * Write EEPROM
+ */
+extern int mcp2200_hid_write_ee(int connectionID, uint8_t address, uint8_t data);
+
+/**
+ * Read EEPROM
+ */
+extern int mcp2200_hid_read_ee(int connectionID, uint8_t address, uint8_t *data);
+
+/**
+ * Read IO values
+ */
+extern int mcp2200_hid_read_io(int connectionID, uint8_t *data);
+
 #endif /* MCP2200_H_ */

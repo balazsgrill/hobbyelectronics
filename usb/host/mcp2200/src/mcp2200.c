@@ -12,10 +12,172 @@
 #define MCP2200_MAX_DEVICE_NUM 10
 #define MCP2200_USE_CONFIGURATION 0
 #define MCP2200_HID_INTERFACE 2
+#define MCP2200_HID_REPORT_SIZE 16
+#define MCP2200_HID_TRANSFER_TIMEOUT 5000
+
+#define MCP2200_HID_COMMAND_SET_CLEAR_OUTPUT 	0x08u
+#define MCP2200_HID_COMMAND_CONFIGURE 			0x10u
+#define MCP2200_HID_COMMAND_READ_EE 			0x20u
+#define MCP2200_HID_COMMAND_WRITE_EE 			0x40u
+#define MCP2200_HID_COMMAND_READ_ALL 			0x80u
+
+#define MCP2200_HID_ENDPOINT_IN 0x81
+#define MCP2200_HID_ENDPOINT_OUT 0x01
 
 static libusb_device* device_list[MCP2200_MAX_DEVICE_NUM];
 static int device_list_count = -1;
 static libusb_device_handle* connection_list[MCP2200_MAX_DEVICE_NUM];
+
+static void closeDevice(int connectionID){
+	libusb_close(connection_list[connectionID]);
+	connection_list[connectionID] = NULL;
+}
+
+int mcp2200_hid_read_io(int connectionID, uint8_t *data){
+	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connection_list[connectionID] == NULL) return -2;
+
+	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
+
+	buffer[0] = MCP2200_HID_COMMAND_READ_ALL;
+
+	int t = 0;
+	int r = libusb_interrupt_transfer(connection_list[connectionID], MCP2200_HID_ENDPOINT_OUT, buffer, MCP2200_HID_REPORT_SIZE, &t, MCP2200_HID_TRANSFER_TIMEOUT);
+
+	if (r == LIBUSB_ERROR_NO_DEVICE){
+		//Device is disconnected
+		closeDevice(connectionID);
+	}
+	if (r != 0) return r;
+
+	r = libusb_interrupt_transfer(connection_list[connectionID], MCP2200_HID_ENDPOINT_IN, buffer, MCP2200_HID_REPORT_SIZE, &t, MCP2200_HID_TRANSFER_TIMEOUT);
+
+	if (r == LIBUSB_ERROR_NO_DEVICE){
+		//Device is disconnected
+		closeDevice(connectionID);
+	}
+	if (r != 0) return r;
+
+	if (t == MCP2200_HID_REPORT_SIZE){
+		*data = buffer[10];
+		return 0;
+	}
+
+	return -3;
+}
+
+int mcp2200_hid_read_ee(int connectionID, uint8_t address, uint8_t *data){
+	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connection_list[connectionID] == NULL) return -2;
+
+	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
+
+	buffer[0] = MCP2200_HID_COMMAND_READ_EE;
+	buffer[1] = address;
+
+	int t = 0;
+	int r = libusb_interrupt_transfer(connection_list[connectionID], MCP2200_HID_ENDPOINT_OUT, buffer, MCP2200_HID_REPORT_SIZE, &t, MCP2200_HID_TRANSFER_TIMEOUT);
+
+	if (r == LIBUSB_ERROR_NO_DEVICE){
+		//Device is disconnected
+		closeDevice(connectionID);
+	}
+	if (r != 0) return r;
+
+	r = libusb_interrupt_transfer(connection_list[connectionID], MCP2200_HID_ENDPOINT_IN, buffer, MCP2200_HID_REPORT_SIZE, &t, MCP2200_HID_TRANSFER_TIMEOUT);
+
+	if (r == LIBUSB_ERROR_NO_DEVICE){
+		//Device is disconnected
+		closeDevice(connectionID);
+	}
+	if (r != 0) return r;
+
+	if (t == MCP2200_HID_REPORT_SIZE){
+		*data = buffer[2];
+		return 0;
+	}
+
+	return -3;
+}
+
+int mcp2200_hid_write_ee(int connectionID, uint8_t address, uint8_t data){
+	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+		if (connection_list[connectionID] == NULL) return -2;
+
+		uint8_t buffer[MCP2200_HID_REPORT_SIZE];
+
+		buffer[0] = MCP2200_HID_COMMAND_WRITE_EE;
+		buffer[1] = address;
+		buffer[2] = data;
+
+		int t = 0;
+		int r = libusb_interrupt_transfer(connection_list[connectionID], MCP2200_HID_ENDPOINT_OUT, buffer, MCP2200_HID_REPORT_SIZE, &t, MCP2200_HID_TRANSFER_TIMEOUT);
+
+		if (r == LIBUSB_ERROR_NO_DEVICE){
+			//Device is disconnected
+			closeDevice(connectionID);
+		}
+
+		if (r != 0) return r;
+
+		return 0;
+}
+
+int mcp2200_hid_configure(int connectionID,
+		uint8_t IO_bmap,
+		uint8_t config_alt_pins,
+		uint8_t IO_default_pins,
+		uint8_t config_alt_options,
+		uint16_t baudRate
+		){
+
+	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connection_list[connectionID] == NULL) return -2;
+
+	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
+
+	buffer[0] = MCP2200_HID_COMMAND_CONFIGURE;
+	buffer[4] = IO_bmap;
+	buffer[5] = config_alt_pins;
+	buffer[6] = config_alt_options;
+	buffer[7] = (uint8_t)((baudRate<<8)&0xFF);
+	buffer[8] = (uint8_t)(baudRate&0xFF);
+
+	int t = 0;
+	int r = libusb_interrupt_transfer(connection_list[connectionID], MCP2200_HID_ENDPOINT_OUT, buffer, MCP2200_HID_REPORT_SIZE, &t, MCP2200_HID_TRANSFER_TIMEOUT);
+
+	if (r == LIBUSB_ERROR_NO_DEVICE){
+		//Device is disconnected
+		closeDevice(connectionID);
+	}
+
+	if (r != 0) return r;
+
+	return 0;
+}
+
+int mcp2200_hid_set_clear_output(int connectionID, uint8_t set_bmap, uint8_t clr_bmap){
+	if (connectionID < MCP2200_MAX_DEVICE_NUM) return -1;
+	if (connection_list[connectionID] == NULL) return -2;
+
+	uint8_t buffer[MCP2200_HID_REPORT_SIZE];
+
+	buffer[0] = MCP2200_HID_COMMAND_SET_CLEAR_OUTPUT;
+	buffer[11] = set_bmap;
+	buffer[12] = clr_bmap;
+
+	int t = 0;
+	int r = libusb_interrupt_transfer(connection_list[connectionID], MCP2200_HID_ENDPOINT_OUT, buffer, MCP2200_HID_REPORT_SIZE, &t, MCP2200_HID_TRANSFER_TIMEOUT);
+
+	if (r == LIBUSB_ERROR_NO_DEVICE){
+		//Device is disconnected
+		closeDevice(connectionID);
+	}
+
+	if (r != 0) return r;
+
+	return 0;
+}
 
 static void free_list(){
 	if (device_list_count > 0){
@@ -99,15 +261,13 @@ int mcp2200_connect(int index){
 			// Set configuration
 			r = libusb_set_configuration(connection_list[conID], MCP2200_USE_CONFIGURATION);
 			if (r != 0){
-				libusb_close(connection_list[conID]);
-				connection_list[conID] = NULL;
+				closeDevice(conID);
 				return r;
 			}
 			// Claim HID interface
 			r = libusb_claim_interface(connection_list[conID], MCP2200_HID_INTERFACE);
 			if (r != 0){
-				libusb_close(connection_list[conID]);
-				connection_list[conID] = NULL;
+				closeDevice(conID);
 				return r;
 			}
 			return conID;
@@ -122,8 +282,7 @@ void mcp2200_disconnect(int connectionID){
 			//Release HID interface
 			libusb_release_interface(connection_list[connectionID], MCP2200_HID_INTERFACE);
 			//Close device
-			libusb_close(connection_list[connectionID]);
-			connection_list[connectionID] = NULL;
+			closeDevice(connectionID);
 		}
 	}
 }
