@@ -86,6 +86,7 @@
 		<exec executable="gcc">
 			<arg value="-Wall"/>
 			<arg value="-shared"/>
+			<arg value="-Wl,--kill-at"/>
 			<arg value="-o"/><arg value="bin/mcp2200-jni${extension_dll}"/>
 			<arg value="bin/mcp2200.o"/>
 			<arg value="bin/mcp2200-jni.o"/>
