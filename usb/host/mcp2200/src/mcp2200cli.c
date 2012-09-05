@@ -40,10 +40,19 @@ int main(int argc, char** argv){
 			printf("Configure error: %d\n", r);
 		}
 
+
+
 		int i;
 		for(i=0;i<=255;i++){
+			uint8_t address = (uint8_t)(i&0xFFu);
+			r = mcp2200_hid_write_ee(connectionID, address, address);
+			if (r != 0){
+				printf("write error of %d: %d\n",i, r);
+			}
+
 			uint8_t data;
-			r = mcp2200_hid_read_ee(connectionID, i, &data);
+
+			r = mcp2200_hid_read_ee(connectionID, address, &data);
 			if (r != 0){
 				printf("read error of %d: %d\n",i, r);
 			}else{
@@ -51,14 +60,14 @@ int main(int argc, char** argv){
 			}
 		}
 
-		for(i=0;i<100;i++){
+		/*for(i=0;i<100;i++){
 			printf("Set\n");
 			mcp2200_hid_set_clear_output(connectionID, 0xFFu, 0u);
 			sleep(1);
 			printf("Clear\n");
 			mcp2200_hid_set_clear_output(connectionID, 0u, 0xFFu);
 			sleep(1);
-		}
+		}*/
 
 	}else{
 		printf("Multiple devices, couldn't choose..");
