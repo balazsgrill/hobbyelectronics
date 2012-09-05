@@ -1,73 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="mcp2200cli" name="MCP2200">
+<project default="all" name="MCP2200">
 	
 	<!-- ================================= 
           target: mcp2200cli              
          ================================= -->
-    <target name="mcp2200cli" depends="BuildWindows, BuildUnix" description="MCP2200 Command line interface">
+    <target name="all" depends="mcp2200cli_exe, mcp2200jni_dll" description="MCP2200 Command line interface">
         <echo>done.</echo>
     </target>
 	
-	<filelist dir="src" id="sourcefiles">
-		<file name="mcp2200.c"/>
-		<file name="mcp2200cli.c"/>
-	</filelist>
-	<mapper id="objectfiles" type="glob" from="*.c" to="bin/*.o">
-	</mapper>
-	<pathconvert pathsep=" " property="objects">
-		<mapper type="glob" from="${basedir}${file.separator}src${file.separator}*.c" to="bin/*.o"></mapper>
-		<filelist refid="sourcefiles" />
-	</pathconvert>
+	<property name="includes_win32">-Iinclude/win32 "-IC:\Program Files\Java\jdk1.7.0_01\include" "-IC:\Program Files\Java\jdk1.7.0_01\include\win32"</property>
 	
-	<condition property="isWin32" value="true">
+	<property name="includes_unix">-I/usr/include/libusb-1.0</property>
+	
+	<property name="libs_windows">lib/win32/libusb-1.0.a</property>
+	
+	<property name="libs_unix">-lusb-1.0 -lrt -lpthread</property>
+	
+	<condition property="extension_exe" value=".exe">
 		<os family="windows"/>
 	</condition>
-			
-	<condition property="isUnix" value="true">
+	
+	<condition property="extension_exe" value="">
 		<os family="unix"/>
 	</condition>
 	
-	<target name="BuildWindows" if="isWin32">
-		<echo>Build for win32</echo>
+	<condition property="extension_dll" value=".dll">
+		<os family="windows"/>
+	</condition>
+	
+	<condition property="extension_dll" value=".so">
+		<os family="unix"/>
+	</condition>	
+	
+	<condition property="includes" value="${includes_win32}">
+		<os family="windows"/>
+	</condition>
+			
+	<condition property="includes" value="${includes_unix}">
+		<os family="unix"/>
+	</condition>
+	
+	<condition property="libs" value="${libs_windows}">
+		<os family="windows"/>
+	</condition>
+
+	<condition property="libs" value="${libs_unix}">
+		<os family="unix"/>
+	</condition>	
+	
+	<target name="bin">
 		<mkdir dir="bin"/>
-		<apply executable="gcc">
+	</target>
+	
+	<target name="mcp2200_o" depends="bin">
+		<exec executable="gcc">
 			<arg value="-c"/>
 			<arg value="-Wall"/>
-			<arg value="-Iinclude/win32"/>
-			<arg value="-o"/><targetfile/>
-			<srcfile/>
-			<filelist refid="sourcefiles"/>
-			<mapper refid="objectfiles" />
-		</apply>
-		<exec executable="gcc">
-			<arg value="-Wall"/>
-			<arg value="-o"/><arg value="bin/mcp2200cli.exe"/>			
-			
-			<arg line="${objects}"/>
-			<arg value="lib/win32/libusb-1.0.a"/>
+			<arg line="${includes}"/>
+			<arg value="-o"/><arg value="bin/mcp2200.o"/>
+			<arg value="src/mcp2200.c"/>
 		</exec>
 	</target>
 	
-	<target name="BuildUnix" if="isUnix">
-		<echo>Build for Unix</echo>
-		<mkdir dir="bin"/>
-		<apply executable="gcc">
+	<target name="mcp2200cli_o" depends="bin">
+		<exec executable="gcc">
 			<arg value="-c"/>
 			<arg value="-Wall"/>
-			<arg value="-I/usr/include/libusb-1.0"/>
-			<arg value="-o"/><targetfile/>
-			<srcfile/>
-			<filelist refid="sourcefiles"/>
-			<mapper refid="objectfiles" />
-		</apply>
+			<arg line="${includes}"/>
+			<arg value="-o"/><arg value="bin/mcp2200cli.o"/>
+			<arg value="src/mcp2200cli.c"/>
+		</exec>
+	</target>
+	
+	<target name="mcp2200jni_o" depends="bin">
+		<exec executable="gcc">
+			<arg value="-c"/>
+			<arg value="-Wall"/>
+			<arg line="${includes}"/>
+			<arg value="-o"/><arg value="bin/mcp2200-jni.o"/>
+			<arg value="src/mcp2200-jni.c"/>
+		</exec>
+	</target>
+	
+	<target name="mcp2200jni_dll" depends="mcp2200_o, mcp2200jni_o">
 		<exec executable="gcc">
 			<arg value="-Wall"/>
-			<arg value="-o"/><arg value="bin/mcp2200cli"/>			
-			
-			<arg line="${objects}"/>
-			<arg value="-lusb-1.0"/>
-			<arg value="-lrt"/>
-			<arg value="-lpthread"/>
+			<arg value="-shared"/>
+			<arg value="-o"/><arg value="bin/mcp2200-jni${extension_dll}"/>
+			<arg value="bin/mcp2200.o"/>
+			<arg value="bin/mcp2200-jni.o"/>
+			<arg line="${libs}"/>
+		</exec>
+	</target>	
+	
+	<target name="mcp2200cli_exe" depends="mcp2200_o, mcp2200cli_o">
+		<exec executable="gcc">
+			<arg value="-Wall"/>
+			<arg value="-o"/><arg value="bin/mcp2200cli${extension_exe}"/>
+			<arg value="bin/mcp2200.o"/>
+			<arg value="bin/mcp2200cli.o"/>
+			<arg line="${libs}"/>
 		</exec>
 	</target>
 	

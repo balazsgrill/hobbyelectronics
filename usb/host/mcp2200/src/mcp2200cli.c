@@ -10,6 +10,22 @@
 
 #include "mcp2200.h"
 
+static int writeEnsure(int connectionID, uint8_t address, uint8_t data, int retries){
+	int try = 0;
+	int r = 0;
+	uint8_t result = 0;
+	while(try < retries){
+		printf("Write trial %d\n",try);
+		r = mcp2200_hid_write_ee(connectionID, address, data);
+		if (r != 0) return r;
+		r = mcp2200_hid_read_ee(connectionID, address, &result);
+		if (r != 0) return r;
+		if (result == data) return 0;
+		try++;
+	}
+	return -200;
+}
+
 int main(int argc, char** argv){
 
 	int r = mcp2200_init();
@@ -45,11 +61,15 @@ int main(int argc, char** argv){
 		int i;
 		for(i=0;i<=255;i++){
 			uint8_t address = (uint8_t)(i&0xFFu);
-			r = mcp2200_hid_write_ee(connectionID, address, address);
+			r = writeEnsure(connectionID, address, address, 1);
 			if (r != 0){
-				printf("write error of %d: %d\n",i, r);
+				printf("write error of %d: %d\n",address, r);
+			}else{
+				printf("Write %d is successful\n", address);
 			}
+		}
 
+		for(i=0;i<=255;i++){
 			uint8_t data;
 
 			r = mcp2200_hid_read_ee(connectionID, address, &data);
