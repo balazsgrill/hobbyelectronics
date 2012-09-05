@@ -7,6 +7,7 @@
 
 #include "mcp2200-jni.h"
 #include "mcp2200.h"
+//#include <stdio.h>
 
 /*
  * Class:     hu_mcp2200_MCP2200JNI
@@ -35,7 +36,8 @@ JNIEXPORT void JNICALL Java_hu_mcp2200_MCP2200JNI_close
  */
 JNIEXPORT jint JNICALL Java_hu_mcp2200_MCP2200JNI_list_1devices
   (JNIEnv * env, jobject this, jint vendorID, jint productID){
-	return mcp2200_list_devices(vendorID, productID);
+	int r = mcp2200_list_devices(vendorID, productID);
+	return r;
 }
 
 /*

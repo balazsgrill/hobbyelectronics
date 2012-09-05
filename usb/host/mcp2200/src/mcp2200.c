@@ -281,23 +281,14 @@ int mcp2200_connect(int index){
 		int conID = findEmptyConnectionSlot();
 		if (conID >= 0){
 			int r = libusb_open(device_list[index], &connection_list[conID]);
-			printf("%d\n",r);
 			if (r < 0) return r;
 
+			// Detach kernel driver, if any.
+			// The result of this call is ignored
 			libusb_detach_kernel_driver(connection_list[conID], MCP2200_HID_INTERFACE);
-			//printf("%d\n",r);
-			//if (r < 0) return r;
 
-			// Set configuration
-			//r = libusb_set_configuration(connection_list[conID], MCP2200_USE_CONFIGURATION);
-			printf("%d\n",r);
-			if (r != 0){
-				closeDevice(conID);
-				return r;
-			}
 			// Claim HID interface
 			r = libusb_claim_interface(connection_list[conID], MCP2200_HID_INTERFACE);
-			printf("%d\n",r);
 			if (r != 0){
 				closeDevice(conID);
 				return r;
