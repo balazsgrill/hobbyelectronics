@@ -1,0 +1,196 @@
+# EESchema Netlist Version 1.1 created  2012. 09. 06. 11:19:51
+(
+ ( /504860D3 C1 C1 1uF
+  ( 1 N-000034 )
+  ( 2 N-000028 )
+ )
+ ( /5048611A C1V5 C2 CP1
+  ( 1 N-000033 )
+  ( 2 N-000034 )
+ )
+ ( /504861CC LED-5MM D1 LED
+  ( 1 N-000025 )
+  ( 2 N-000026 )
+ )
+ ( /50486220 LED-5MM D2 LED
+  ( 1 N-000023 )
+  ( 2 N-000024 )
+ )
+ ( /5048689A LED-5MM D3 LED
+  ( 1 N-000009 )
+  ( 2 N-000014 )
+ )
+ ( /504853AF SO20L IC1 MCP2200
+  ( 1 N-000033 )
+  ( 2 N-000012 )
+  ( 3 N-000013 )
+  ( 4 N-000027 )
+  ( 5 N-000026 )
+  ( 6 N-000024 )
+  ( 7 N-000006 )
+  ( 8 N-000005 )
+  ( 9 N-000014 )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 ? )
+  ( 16 ? )
+  ( 17 N-000028 )
+  ( 18 N-000030 )
+  ( 19 N-000022 )
+  ( 20 N-000034 )
+ )
+ ( /50485F6B USB112A J1 USB112A
+  ( 1 N-000033 )
+  ( 2 N-000030 )
+  ( 3 N-000022 )
+  ( 4 ? )
+  ( 5 N-000034 )
+ )
+ ( /50486394 SIL-3 K1 CONN_3
+  ( 1 N-000011 )
+  ( 2 N-000032 )
+  ( 3 N-000031 )
+ )
+ ( /50486370 SIL-2 P1 CONN_2
+  ( 1 N-000011 )
+  ( 2 N-000010 )
+ )
+ ( /50486377 SIL-2 P2 CONN_2
+  ( 1 N-000032 )
+  ( 2 N-000010 )
+ )
+ ( /504863FA SIL-2 P3 CONN_2
+  ( 1 N-000010 )
+  ( 2 N-000031 )
+ )
+ ( /50486225 R3 R1 R
+  ( 1 N-000025 )
+  ( 2 N-000033 )
+ )
+ ( /50486231 R3 R2 R
+  ( 1 N-000023 )
+  ( 2 N-000033 )
+ )
+ ( /5048618A R3 R3 R
+  ( 1 N-000033 )
+  ( 2 N-000027 )
+ )
+ ( /504862CE R3 R4 R
+  ( 1 N-000007 )
+  ( 2 N-000006 )
+ )
+ ( /50486304 R3 R5 R
+  ( 1 N-000004 )
+  ( 2 N-000005 )
+ )
+ ( /504868A1 R3 R6 R
+  ( 1 N-000009 )
+  ( 2 N-000033 )
+ )
+ ( /50485FD0 SIL-3 U1 RESONATOR
+  ( 1 N-000012 )
+  ( 2 N-000034 )
+  ( 3 N-000013 )
+ )
+ ( /50486284 DIP-6__300_ELL U2 OPTO-TRANSISTOR
+  ( 1 N-000007 )
+  ( 2 N-000034 )
+  ( 3 ? )
+  ( 4 N-000031 )
+  ( 5 N-000011 )
+  ( 6 ? )
+ )
+ ( /5048628E DIP-6__300_ELL U3 OPTO-TRANSISTOR
+  ( 1 N-000004 )
+  ( 2 N-000034 )
+  ( 3 ? )
+  ( 4 N-000031 )
+  ( 5 N-000032 )
+  ( 6 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ CP*
+ SM*
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}

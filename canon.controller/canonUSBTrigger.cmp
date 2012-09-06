@@ -1,0 +1,143 @@
+Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 09. 06. 11:19:51
+
+BeginCmp
+TimeStamp = /504860D3;
+Reference = C1;
+ValeurCmp = 1uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5048611A;
+Reference = C2;
+ValeurCmp = CP1;
+IdModule  = C1V5;
+EndCmp
+
+BeginCmp
+TimeStamp = /504861CC;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486220;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /5048689A;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /504853AF;
+Reference = IC1;
+ValeurCmp = MCP2200;
+IdModule  = SO20L;
+EndCmp
+
+BeginCmp
+TimeStamp = /50485F6B;
+Reference = J1;
+ValeurCmp = USB112A;
+IdModule  = USB112A;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486394;
+Reference = K1;
+ValeurCmp = CONN_3;
+IdModule  = SIL-3;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486370;
+Reference = P1;
+ValeurCmp = CONN_2;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486377;
+Reference = P2;
+ValeurCmp = CONN_2;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /504863FA;
+Reference = P3;
+ValeurCmp = CONN_2;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486225;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486231;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5048618A;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /504862CE;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486304;
+Reference = R5;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /504868A1;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /50485FD0;
+Reference = U1;
+ValeurCmp = RESONATOR;
+IdModule  = SIL-3;
+EndCmp
+
+BeginCmp
+TimeStamp = /50486284;
+Reference = U2;
+ValeurCmp = OPTO-TRANSISTOR;
+IdModule  = DIP-6__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /5048628E;
+Reference = U3;
+ValeurCmp = OPTO-TRANSISTOR;
+IdModule  = DIP-6__300_ELL;
+EndCmp
+
+EndListe
