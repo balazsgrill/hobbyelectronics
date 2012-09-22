@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-12-28 BZR 3254)-stable date = 2012. 09. 06. 11:19:51
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-testing date = Sat 22 Sep 2012 16:54:51 CEST
 
 BeginCmp
 TimeStamp = /504860D3;
@@ -78,6 +78,20 @@ IdModule  = SIL-2;
 EndCmp
 
 BeginCmp
+TimeStamp = /505DC747;
+Reference = Q1;
+ValeurCmp = MOSFET_N;
+IdModule  = TO92DGS;
+EndCmp
+
+BeginCmp
+TimeStamp = /505DC738;
+Reference = Q2;
+ValeurCmp = MOSFET_N;
+IdModule  = TO92DGS;
+EndCmp
+
+BeginCmp
 TimeStamp = /50486225;
 Reference = R1;
 ValeurCmp = R;
@@ -115,6 +129,20 @@ EndCmp
 BeginCmp
 TimeStamp = /504868A1;
 Reference = R6;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /505DC766;
+Reference = R7;
+ValeurCmp = R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /505DC757;
+Reference = R8;
 ValeurCmp = R;
 IdModule  = R3;
 EndCmp

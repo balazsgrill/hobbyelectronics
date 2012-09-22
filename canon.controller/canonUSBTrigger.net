@@ -1,145 +1,143 @@
-# EESchema Netlist Version 1.1 created  2012. 09. 06. 11:19:51
+# EESchema Netlist Version 1.1 created  Sat 22 Sep 2012 16:52:34 CEST
 (
- ( /504860D3 C1 C1 1uF
-  ( 1 N-000034 )
-  ( 2 N-000028 )
+ ( /504868A1 $noname  R6 R {Lib=R}
+  (    1 N-000013 )
+  (    2 N-000028 )
  )
- ( /5048611A C1V5 C2 CP1
-  ( 1 N-000033 )
-  ( 2 N-000034 )
+ ( /5048689A $noname  D3 LED {Lib=LED}
+  (    1 N-000013 )
+  (    2 N-000036 )
  )
- ( /504861CC LED-5MM D1 LED
-  ( 1 N-000025 )
-  ( 2 N-000026 )
+ ( /504863FA $noname  P3 CONN_2 {Lib=CONN_2}
+  (    1 N-000023 )
+  (    2 N-000022 )
  )
- ( /50486220 LED-5MM D2 LED
-  ( 1 N-000023 )
-  ( 2 N-000024 )
+ ( /50486394 $noname  K1 CONN_3 {Lib=CONN_3}
+  (    1 N-000021 )
+  (    2 N-000006 )
+  (    3 N-000022 )
  )
- ( /5048689A LED-5MM D3 LED
-  ( 1 N-000009 )
-  ( 2 N-000014 )
+ ( /50486377 $noname  P2 CONN_2 {Lib=CONN_2}
+  (    1 N-000006 )
+  (    2 N-000023 )
  )
- ( /504853AF SO20L IC1 MCP2200
-  ( 1 N-000033 )
-  ( 2 N-000012 )
-  ( 3 N-000013 )
-  ( 4 N-000027 )
-  ( 5 N-000026 )
-  ( 6 N-000024 )
-  ( 7 N-000006 )
-  ( 8 N-000005 )
-  ( 9 N-000014 )
-  ( 10 ? )
-  ( 11 ? )
-  ( 12 ? )
-  ( 13 ? )
-  ( 14 ? )
-  ( 15 ? )
-  ( 16 ? )
-  ( 17 N-000028 )
-  ( 18 N-000030 )
-  ( 19 N-000022 )
-  ( 20 N-000034 )
+ ( /50486370 $noname  P1 CONN_2 {Lib=CONN_2}
+  (    1 N-000021 )
+  (    2 N-000023 )
  )
- ( /50485F6B USB112A J1 USB112A
-  ( 1 N-000033 )
-  ( 2 N-000030 )
-  ( 3 N-000022 )
-  ( 4 ? )
-  ( 5 N-000034 )
+ ( /50486304 $noname  R5 R {Lib=R}
+  (    1 N-000014 )
+  (    2 N-000005 )
  )
- ( /50486394 SIL-3 K1 CONN_3
-  ( 1 N-000011 )
-  ( 2 N-000032 )
-  ( 3 N-000031 )
+ ( /504862CE $noname  R4 R {Lib=R}
+  (    1 N-000015 )
+  (    2 N-000020 )
  )
- ( /50486370 SIL-2 P1 CONN_2
-  ( 1 N-000011 )
-  ( 2 N-000010 )
+ ( /5048628E $noname  U3 OPTO-TRANSISTOR {Lib=OPTO-TRANSISTOR}
+  (    1 N-000010 )
+  (    2 N-000012 )
+  (    3 ? )
+  (    4 N-000022 )
+  (    5 N-000006 )
+  (    6 ? )
  )
- ( /50486377 SIL-2 P2 CONN_2
-  ( 1 N-000032 )
-  ( 2 N-000010 )
+ ( /50486284 $noname  U2 OPTO-TRANSISTOR {Lib=OPTO-TRANSISTOR}
+  (    1 N-000009 )
+  (    2 N-000011 )
+  (    3 ? )
+  (    4 N-000022 )
+  (    5 N-000021 )
+  (    6 ? )
  )
- ( /504863FA SIL-2 P3 CONN_2
-  ( 1 N-000010 )
-  ( 2 N-000031 )
+ ( /50486231 $noname  R2 R {Lib=R}
+  (    1 N-000007 )
+  (    2 N-000028 )
  )
- ( /50486225 R3 R1 R
-  ( 1 N-000025 )
-  ( 2 N-000033 )
+ ( /50486225 $noname  R1 R {Lib=R}
+  (    1 N-000019 )
+  (    2 N-000028 )
  )
- ( /50486231 R3 R2 R
-  ( 1 N-000023 )
-  ( 2 N-000033 )
+ ( /50486220 $noname  D2 LED {Lib=LED}
+  (    1 N-000007 )
+  (    2 N-000008 )
  )
- ( /5048618A R3 R3 R
-  ( 1 N-000033 )
-  ( 2 N-000027 )
+ ( /504861CC $noname  D1 LED {Lib=LED}
+  (    1 N-000019 )
+  (    2 N-000018 )
  )
- ( /504862CE R3 R4 R
-  ( 1 N-000007 )
-  ( 2 N-000006 )
+ ( /5048618A $noname  R3 R {Lib=R}
+  (    1 N-000028 )
+  (    2 N-000017 )
  )
- ( /50486304 R3 R5 R
-  ( 1 N-000004 )
-  ( 2 N-000005 )
+ ( /5048611A $noname  C2 CP1 {Lib=CP1}
+  (    1 N-000028 )
+  (    2 N-000037 )
  )
- ( /504868A1 R3 R6 R
-  ( 1 N-000009 )
-  ( 2 N-000033 )
+ ( /504860D3 $noname  C1 1uF {Lib=C}
+  (    1 N-000037 )
+  (    2 N-000016 )
  )
- ( /50485FD0 SIL-3 U1 RESONATOR
-  ( 1 N-000012 )
-  ( 2 N-000034 )
-  ( 3 N-000013 )
+ ( /50485FD0 $noname  U1 RESONATOR {Lib=RESONATOR}
+  (    1 N-000001 )
+  (    2 N-000037 )
+  (    3 N-000004 )
  )
- ( /50486284 DIP-6__300_ELL U2 OPTO-TRANSISTOR
-  ( 1 N-000007 )
-  ( 2 N-000034 )
-  ( 3 ? )
-  ( 4 N-000031 )
-  ( 5 N-000011 )
-  ( 6 ? )
+ ( /50485F6B $noname  J1 USB112A {Lib=USB112A}
+  (    1 N-000028 )
+  (    2 N-000003 )
+  (    3 N-000002 )
+  (    4 ? )
+  (    5 N-000037 )
  )
- ( /5048628E DIP-6__300_ELL U3 OPTO-TRANSISTOR
-  ( 1 N-000004 )
-  ( 2 N-000034 )
-  ( 3 ? )
-  ( 4 N-000031 )
-  ( 5 N-000032 )
-  ( 6 ? )
+ ( /504853AF $noname  IC1 MCP2200 {Lib=MCP2200}
+  (    1 N-000028 )
+  (    2 N-000001 )
+  (    3 N-000004 )
+  (    4 N-000017 )
+  (    5 N-000018 )
+  (    6 N-000008 )
+  (    7 N-000020 )
+  (    8 N-000005 )
+  (    9 N-000036 )
+  (   10 ? )
+  (   11 ? )
+  (   12 ? )
+  (   13 ? )
+  (   14 ? )
+  (   15 ? )
+  (   16 ? )
+  (   17 N-000016 )
+  (   18 N-000003 )
+  (   19 N-000002 )
+  (   20 N-000037 )
+ )
+ ( /505DC738 $noname  Q2 MOSFET_N {Lib=MOSFET_N}
+  (    D N-000012 )
+  (    G N-000014 )
+  (    S N-000037 )
+ )
+ ( /505DC747 $noname  Q1 MOSFET_N {Lib=MOSFET_N}
+  (    D N-000011 )
+  (    G N-000015 )
+  (    S N-000037 )
+ )
+ ( /505DC757 $noname  R8 R {Lib=R}
+  (    1 N-000028 )
+  (    2 N-000009 )
+ )
+ ( /505DC766 $noname  R7 R {Lib=R}
+  (    1 N-000028 )
+  (    2 N-000010 )
  )
 )
 *
 { Allowed footprints by component:
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$component C2
- CP*
- SM*
-$endlist
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
 $component D3
  LED-3MM
@@ -150,21 +148,7 @@ $component D3
  LED-1206
  LEDV
 $endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R3
+$component R5
  R?
  SM0603
  SM0805
@@ -178,14 +162,62 @@ $component R4
  R?-*
  SM1206
 $endlist
-$component R5
+$component R2
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R6
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component C2
+ CP*
+ SM*
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
  R?
  SM0603
  SM0805
@@ -194,3 +226,101 @@ $component R6
 $endlist
 $endfootprintlist
 }
+{ Pin List by Nets
+Net 1 "" ""
+ IC1 2
+ U1 1
+Net 2 "" ""
+ IC1 19
+ J1 3
+Net 3 "" ""
+ IC1 18
+ J1 2
+Net 4 "" ""
+ U1 3
+ IC1 3
+Net 5 "" ""
+ IC1 8
+ R5 2
+Net 6 "" ""
+ U3 5
+ P2 1
+ K1 2
+Net 7 "" ""
+ D2 1
+ R2 1
+Net 8 "" ""
+ IC1 6
+ D2 2
+Net 9 "" ""
+ R8 2
+ U2 1
+Net 10 "" ""
+ U3 1
+ R7 2
+Net 11 "" ""
+ U2 2
+ Q1 D
+Net 12 "" ""
+ U3 2
+ Q2 D
+Net 13 "" ""
+ D3 1
+ R6 1
+Net 14 "" ""
+ R5 1
+ Q2 G
+Net 15 "" ""
+ R4 1
+ Q1 G
+Net 16 "" ""
+ IC1 17
+ C1 2
+Net 17 "" ""
+ R3 2
+ IC1 4
+Net 18 "" ""
+ D1 2
+ IC1 5
+Net 19 "" ""
+ R1 1
+ D1 1
+Net 20 "" ""
+ R4 2
+ IC1 7
+Net 21 "" ""
+ K1 1
+ P1 1
+ U2 5
+Net 22 "" ""
+ U3 4
+ U2 4
+ P3 2
+ K1 3
+Net 23 "" ""
+ P3 1
+ P2 2
+ P1 2
+Net 28 "" ""
+ R7 1
+ C2 1
+ J1 1
+ R2 2
+ R1 2
+ R3 1
+ IC1 1
+ R8 1
+ R6 2
+Net 36 "" ""
+ IC1 9
+ D3 2
+Net 37 "" ""
+ Q1 S
+ Q2 S
+ U1 2
+ C1 1
+ C2 2
+ J1 5
+ IC1 20
+}
+#End
