@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-testing date = Sat 22 Sep 2012 16:54:51 CEST
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-testing date = Sun 23 Sep 2012 13:33:09 CEST
 
 BeginCmp
 TimeStamp = /504860D3;
@@ -47,6 +47,13 @@ TimeStamp = /50485F6B;
 Reference = J1;
 ValeurCmp = USB112A;
 IdModule  = USB112A;
+EndCmp
+
+BeginCmp
+TimeStamp = /505EEC90;
+Reference = JP1;
+ValeurCmp = JUMPER3;
+IdModule  = SIL-3;
 EndCmp
 
 BeginCmp
@@ -158,14 +165,14 @@ BeginCmp
 TimeStamp = /50486284;
 Reference = U2;
 ValeurCmp = OPTO-TRANSISTOR;
-IdModule  = DIP-6__300_ELL;
+IdModule  = DIP-6__300;
 EndCmp
 
 BeginCmp
 TimeStamp = /5048628E;
 Reference = U3;
 ValeurCmp = OPTO-TRANSISTOR;
-IdModule  = DIP-6__300_ELL;
+IdModule  = DIP-6__300;
 EndCmp
 
 EndListe

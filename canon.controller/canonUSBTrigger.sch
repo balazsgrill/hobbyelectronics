@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 22 Sep 2012 16:52:20 CEST
+EESchema Schematic File Version 2  date Sun 23 Sep 2012 13:07:19 CEST
 LIBS:resonator
 LIBS:usb112a
 LIBS:mcp2200
@@ -39,7 +39,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 sep 2012"
+Date "23 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -281,6 +281,15 @@ F 1 "R" V 6500 3250 50  0000 C CNN
 	1    6500 3250
 	1    0    0    -1  
 $EndComp
+$Comp
+L JUMPER3 JP1
+U 1 1 505EEC90
+P 8050 5900
+F 0 "JP1" H 8100 5800 40  0000 L CNN
+F 1 "JUMPER3" H 8050 6000 40  0000 C CNN
+	1    8050 5900
+	1    0    0    -1  
+$EndComp
 Connection ~ 1800 4100
 Wire Wire Line
 	1800 3800 1800 4400
@@ -297,10 +306,9 @@ Wire Wire Line
 Wire Wire Line
 	8400 4200 8300 4200
 Wire Wire Line
-	8300 4200 8300 5500
+	8300 4200 8300 5900
 Wire Wire Line
 	8300 5500 8400 5500
-Connection ~ 8050 5050
 Wire Wire Line
 	7950 5050 8050 5050
 Connection ~ 8150 4750
@@ -413,10 +421,9 @@ Connection ~ 8100 4000
 Wire Wire Line
 	7950 4300 8050 4300
 Wire Wire Line
-	8050 4300 8050 5700
+	8050 4300 8050 5050
 Wire Wire Line
 	7200 5700 8400 5700
-Connection ~ 8050 5700
 Wire Wire Line
 	8400 4950 8300 4950
 Connection ~ 8300 4950
@@ -464,4 +471,20 @@ Wire Wire Line
 	6050 4400 6050 4200
 Wire Wire Line
 	6050 4200 5800 4200
+Wire Wire Line
+	7600 5700 7600 5900
+Wire Wire Line
+	7600 5900 7800 5900
+Connection ~ 7600 5700
+Connection ~ 8300 5500
+Connection ~ 8300 5500
+Wire Wire Line
+	7700 5600 7700 6100
+Wire Wire Line
+	7700 6100 8050 6100
+Wire Wire Line
+	8050 6100 8050 6000
+Connection ~ 7700 5600
+Text Notes 7300 6200 0    60   ~ 0
+Is the USB trigger can be disabled by the switch
 $EndSCHEMATC
